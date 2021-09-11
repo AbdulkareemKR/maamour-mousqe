@@ -6,12 +6,14 @@ import Sidebar from "./Component/sidebar/Sidebar";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import MainPage from "./Component/mainPage/MainPage.js";
 import SidebarBootstrap from "./Component/SidebarBootstrap";
+import "./Component/sidebarStyle.css";
+import Header from "./Component/header/Header";
 
 function App() {
   return (
     <Router>
-      <div>
-        <Sidebar />
+      <div className="main-container">
+        <SidebarBootstrap />
         <div className="content">
           <Switch>
             <Route path="/registration">
@@ -20,8 +22,8 @@ function App() {
             <Route path="/main">
               <MainPage />
             </Route>
-             <Route path="/sidebar">
-              <SidebarBootstrap/>
+            <Route path="/s">
+              <SidebarBootstrap />
             </Route>
           </Switch>
         </div>

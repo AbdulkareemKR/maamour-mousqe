@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Modal, Button } from "react-bootstrap";
 import Registration from "./Registration";
-import logo from "./logo.png";
+import logo from "../images/logo.png";
 import styles from "./Style.module.css";
 
 function MadalRegistration() {

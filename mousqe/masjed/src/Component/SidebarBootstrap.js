@@ -1,14 +1,25 @@
 import { slide as Menu } from "react-burger-menu";
+import "./sidebarStyle.css";
 
-class Example extends Component {
-  showSettings(event) {
-    event.preventDefault();
-  }
+import React from "react";
+import Header from "./header/Header";
 
-  render() {
-    // NOTE: You also need to provide styles, see https://github.com/negomi/react-burger-menu#styling
-    return (
-      <Menu>
+let showSettings = (event) => {
+  event.preventdefault();
+};
+
+function SidebarBootstrap() {
+  return (
+    <div id="outer-container">
+      <header>
+        <Header />
+      </header>
+      <Menu
+        right
+        pageWrapId={"page-wrap"}
+        outerContainerId={"outer-container"}
+      />
+      <main id="page-wrap">
         <a id="home" className="menu-item" href="/">
           Home
         </a>
@@ -18,12 +29,16 @@ class Example extends Component {
         <a id="contact" className="menu-item" href="/contact">
           Contact
         </a>
-        <a onClick={this.showSettings} className="menu-item--small" href="">
+        <a
+          onClick={(event) => showSettings(event)}
+          className="menu-item--small"
+          href=""
+        >
           Settings
         </a>
-      </Menu>
-    );
-  }
+      </main>
+    </div>
+  );
 }
 
 export default SidebarBootstrap;
