@@ -74,7 +74,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 .menu-item {
   display: block !important;
-  color: #d49847;
+  color: black;
   text-decoration: none;
   margin-bottom: 20px;
   padding-bottom: 20px;
