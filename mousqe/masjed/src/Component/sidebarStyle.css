@@ -1,10 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo&display=swap");
 /* Position and sizing of burger button */
 .bm-burger-button {
   position: fixed;
   width: 36px;
   height: 30px;
-  right: 21px;
+  right: 32px;
   top: 21px;
+  color: grey !important;
+}
+
+.bm-burger-button:hover {
+  color: grey;
 }
 
 /* Color/shape of burger icon bars */
@@ -18,15 +24,8 @@
 }
 
 /* Position and sizing of clickable cross button */
-.bm-cross-button {
-  height: 24px;
-  width: 24px;
-}
 
 /* Color/shape of close button cross */
-.bm-cross {
-  background: #bdc3c7;
-}
 
 /*
 Sidebar wrapper styles
@@ -42,8 +41,9 @@ Note: Beware of modifying this element as it can break the animations - you shou
 /* General sidebar styles */
 .bm-menu {
   background: #f8f8f8;
-  padding: 2.5em 1.5em 0;
+  padding: 0;
   font-size: 1.15em;
+  padding-top: 50px;
 }
 
 /* Morph shape necessary with bubble or elastic */
@@ -55,11 +55,12 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .bm-item-list {
   color: #b8b7ad;
   padding: 0.8em;
+  display: block;
 }
 
 /* Individual item */
 .bm-item {
-  display: inline-block;
+  display: block;
 }
 
 /* Styling of overlay */
@@ -70,3 +71,30 @@ Note: Beware of modifying this element as it can break the animations - you shou
 /* 
 .main-container {
 } */
+
+.menu-item {
+  display: block !important;
+  color: #d49847;
+  text-decoration: none;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: solid 1px silver;
+  direction: rtl;
+  padding-right: 0;
+  margin-right: 0;
+  font-weight: 700;
+  font-size: 1rem;
+  font-family: "Cairo", sans-serif;
+  display: inline-block;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.menu-item:hover {
+  color: grey;
+}
+
+#page-wrap {
+  text-align: center;
+  justify-content: center;
+}
