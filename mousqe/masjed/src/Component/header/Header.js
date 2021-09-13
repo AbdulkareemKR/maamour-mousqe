@@ -9,7 +9,13 @@ function Header() {
         <h1 className={styles.title}>
           مسجد <span className={styles.titleCustom}>معمور</span>
         </h1>
-        <img src={MaamourLogo} alt="شعار" className={styles.maamourLogo}></img>
+        <a className={styles.titleLink} href="/home">
+          <img
+            src={MaamourLogo}
+            alt="شعار معمور"
+            className={styles.maamourLogo}
+          ></img>
+        </a>
       </header>
     </div>
   );

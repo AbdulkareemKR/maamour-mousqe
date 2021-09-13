@@ -1,12 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Cairo&display=swap");
 /* Position and sizing of burger button */
+
 .bm-burger-button {
   position: fixed;
   width: 36px;
   height: 30px;
   right: 32px;
   top: 21px;
-  color: grey !important;
 }
 
 .bm-burger-button:hover {
@@ -90,6 +90,10 @@ Note: Beware of modifying this element as it can break the animations - you shou
   transition: 0.3s;
 }
 
+.menu-item:hover .fa {
+  color: grey;
+}
+
 .menu-item:hover {
   color: grey;
 }
@@ -97,4 +101,14 @@ Note: Beware of modifying this element as it can break the animations - you shou
 #page-wrap {
   text-align: center;
   justify-content: center;
+}
+
+.fa {
+  color: #d49847;
+  font-size: 2rem;
+  transition: 0.3s;
+}
+
+.fa:hover {
+  color: grey;
 }
