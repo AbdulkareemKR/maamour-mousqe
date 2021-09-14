@@ -1,10 +1,22 @@
 import { slide as Menu } from "react-burger-menu";
 import "./sidebarStyle.css";
-import React, { useState } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import Header from "./header/Header";
+import RegistrationModal from "./registration/RegistrationModal";
+import { Button } from "react-bootstrap";
 
 function SidebarBootstrap() {
-  const [RegistrationStatus, setRegistrationStatus] = useState(false);
+  const [registration, setRegistration] = useState(true);
+  const [logIn, setLogIn] = useState(false);
+  let modal = <RegistrationModal registration={true} setRegistration={false} />;
+
+  const handleInputChange = useCallback(
+    (event) => {
+      setLogIn(event.target.value);
+    },
+    [setLogIn]
+  );
+
   return (
     <div id="outer-container">
       <header>
@@ -34,9 +46,13 @@ function SidebarBootstrap() {
             <br />
             تواصل معنا
           </a>
-          <a id="setting" className="menu-item" href="/setting">
-            {RegistrationStatus ? (
-              <div>
+          <Button id="setting" className="menu-item">
+            {registration ? (
+              <div
+                onClick={() => {
+                  setLogIn(true);
+                }}
+              >
                 <i className="fa fa-sign-in" aria-hidden="true"></i>
                 <br />
                 تسجيل الدخول
@@ -48,9 +64,10 @@ function SidebarBootstrap() {
                 إعدادات الحساب
               </div>
             )}
-          </a>
+          </Button>
         </main>
       </Menu>
+      {logIn ? modal : ""}
     </div>
   );
 }

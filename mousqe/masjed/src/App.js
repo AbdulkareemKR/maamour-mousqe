@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import SidebarBootstrap from "./Component/SidebarBootstrap";
 import "./Component/sidebarStyle.css";
 import Header from "./Component/header/Header";
+import RegistrationModal from "./Component/registration/RegistrationModal";
 
 function App() {
   return (

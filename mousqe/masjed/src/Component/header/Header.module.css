@@ -14,14 +14,16 @@
   position: absolute;
   left: 21px;
   top: 10px;
-  background-color: rgba(129, 128, 128, 0.192);
+  background-color: rgba(128, 128, 128, 0.295);
   border-radius: 20px;
 }
 
 .title {
   font-family: "Cairo", sans-serif;
   text-align: center;
+  vertical-align: baseline;
   font-weight: 700;
+  padding-top: 8px;
 }
 
 .titleCustom {
@@ -31,4 +33,8 @@
 .titleLink {
   text-decoration: none;
   color: black;
+}
+
+a {
+  cursor: pointer;
 }
