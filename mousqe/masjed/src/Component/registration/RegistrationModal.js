@@ -34,7 +34,7 @@ function RegistrationModal({ registration, setRegistration }) {
           </p>
         </Modal.Body>
         <Modal.Footer>
-          <Button onClick={() => (registration = false-)}>Close</Button>
+          <Button onClick={() => (registration = false)}>Close</Button>
         </Modal.Footer>
       </Modal>
       <>

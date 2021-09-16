@@ -46,7 +46,7 @@ function SidebarBootstrap() {
             <br />
             تواصل معنا
           </a>
-          <Button id="setting" className="menu-item">
+          <a id="setting" className="menu-item">
             {registration ? (
               <div
                 onClick={() => {
@@ -64,7 +64,7 @@ function SidebarBootstrap() {
                 إعدادات الحساب
               </div>
             )}
-          </Button>
+          </a>
         </main>
       </Menu>
       {logIn ? modal : ""}
