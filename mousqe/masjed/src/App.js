@@ -8,6 +8,7 @@ import SidebarBootstrap from "./Component/SidebarBootstrap";
 import "./Component/sidebarStyle.css";
 import Header from "./Component/header/Header";
 import RegistrationModal from "./Component/registration/RegistrationModal";
+import ReactDOM from "react-dom";
 
 function App() {
   return (
@@ -29,4 +30,6 @@ function App() {
   );
 }
 
+const rootElement = document.getElementById("root");
+ReactDOM.render(<App />, rootElement);
 export default App;
