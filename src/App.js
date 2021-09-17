@@ -2,13 +2,11 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import RegistrationPage from "./Component/registraion/RegistrationPage";
 import React from "react";
-import Sidebar from "./Component/sidebar/Sidebar";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import SidebarBootstrap from "./Component/SidebarBootstrap";
-import "./Component/sidebarStyle.css";
-import Header from "./Component/header/Header";
-import RegistrationModal from "./Component/registrationModal/RegistrationModal";
+import SidebarBootstrap from "./Component/sidebar/SidebarBootstrap";
+import "./Component/sidebar/sidebarStyle.css";
 import ReactDOM from "react-dom";
+import HomePage from "./Component/pages/homePage/HomePage.js";
 
 function App() {
   return (
@@ -21,7 +19,9 @@ function App() {
           <Route path="/registration">
             <RegistrationPage />
           </Route>
-          <Route path="/">{/* <SidebarBootstrap /> */}</Route>
+          <Route path="/">
+            <HomePage />
+          </Route>
         </Switch>
       </div>
     </Router>

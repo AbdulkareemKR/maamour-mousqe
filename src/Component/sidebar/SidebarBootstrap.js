@@ -1,8 +1,8 @@
 import { slide as Menu } from "react-burger-menu";
 import "./sidebarStyle.css";
 import React, { useState, useEffect, useCallback } from "react";
-import Header from "./header/Header";
-import RegistrationModal from "./registrationModal/RegistrationModal";
+import Header from "../header/Header";
+import RegistrationModal from "../registrationModal/RegistrationModal";
 import { Button } from "react-bootstrap";
 
 function SidebarBootstrap() {
