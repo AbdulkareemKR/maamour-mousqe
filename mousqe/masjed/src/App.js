@@ -12,18 +12,18 @@ import RegistrationModal from "./Component/registration/RegistrationModal";
 function App() {
   return (
     <Router>
-      <div className="main-container">
-        <SidebarBootstrap />
-        <div className="content">
-          <Switch>
-            <Route path="/registration">
-              <RegistrationPage />
-            </Route>
-            <Route path="/s">
-              <SidebarBootstrap />
-            </Route>
-          </Switch>
-        </div>
+      <div>
+        <nav>
+          <SidebarBootstrap />
+        </nav>
+        <Switch>
+          <Route path="/registration">
+            <RegistrationPage />
+          </Route>
+          <Route path="/">
+            <SidebarBootstrap />
+          </Route>
+        </Switch>
       </div>
     </Router>
   );
