@@ -21,9 +21,7 @@ function App() {
           <Route path="/registration">
             <RegistrationPage />
           </Route>
-          <Route path="/">
-            <SidebarBootstrap />
-          </Route>
+          <Route path="/">{/* <SidebarBootstrap /> */}</Route>
         </Switch>
       </div>
     </Router>
