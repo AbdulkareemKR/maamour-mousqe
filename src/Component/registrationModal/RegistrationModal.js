@@ -1,24 +1,26 @@
 import React, { useCallback } from "react";
-import { Modal, Button } from "react-bootstrap";
+import Button from "react-bootstrap/Button";
+import Modal from "react-bootstrap/Modal";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-function RegistrationModal({ registration, setRegistration }) {
+function RegistrationModal(props) {
   const [modalShow, setModalShow] = React.useState(true);
 
   const handleInputChange = useCallback(
     (event) => {
-      setRegistration(event.target.value);
+      console.log(props.setRegistration);
+      props.setRegistration(false);
+      console.log(props.setRegistration);
     },
-    [setRegistration]
+    [props.setRegistration]
   );
 
   return (
     <div>
       <Modal
-        show={registration}
+        show={props.registration}
         size="lg"
         aria-labelledby="contained-modal-title-vcenter"
-        centered
       >
         <Modal.Header closeButton>
           <Modal.Title id="contained-modal-title-vcenter">
@@ -34,13 +36,11 @@ function RegistrationModal({ registration, setRegistration }) {
           </p>
         </Modal.Body>
         <Modal.Footer>
-          <Button onClick={() => (registration = false)}>Close</Button>
+          <Button onClick={() => handleInputChange}>Close</Button>
         </Modal.Footer>
       </Modal>
       <>
-        <Button variant="primary" onClick={handleInputChange}>
-          Launch vertically centered modal
-        </Button>
+        <Button variant="primary">Launch vertically centered modal</Button>
       </>
     </div>
   );
