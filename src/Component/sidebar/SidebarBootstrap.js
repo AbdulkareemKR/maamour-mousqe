@@ -1,22 +1,26 @@
 import { slide as Menu } from "react-burger-menu";
 import "./sidebarStyle.css";
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState } from "react";
 import Header from "../header/Header";
 import RegistrationModal from "../registrationModal/RegistrationModal";
-import { Button } from "react-bootstrap";
-import Example from "../registrationModal/Example.js";
 
 function SidebarBootstrap() {
-  const [registration, setRegistration] = useState(true);
+  const [showModal, setModal] = useState(false);
   const [logIn, setLogIn] = useState(false);
-  let modal = <RegistrationModal registration={true} setRegistration={false} />;
 
-  const handleInputChange = useCallback(
-    (event) => {
-      setLogIn(event.target.value);
-    },
-    [setLogIn]
-  );
+  const fireModal = () => {
+    console.log("Modal launched!");
+    setModal(true);
+  };
+  const handleClose = () => {
+    setModal(false);
+  };
+  const handleLogIn = () => {
+    setLogIn(true);
+  };
+  const handleLogOut = () => {
+    setLogIn(false);
+  };
 
   return (
     <div id="outer-container">
@@ -47,28 +51,26 @@ function SidebarBootstrap() {
             <br />
             تواصل معنا
           </a>
-          <a id="setting" className="menu-item">
-            {registration ? (
+          <a onClick={fireModal} id="setting" className="menu-item">
+            {logIn ? (
               <div
-                onClick={() => {
-                  setLogIn(true);
-                }}
+              // onClick={handleLogIn}
               >
-                <i className="fa fa-sign-in" aria-hidden="true"></i>
-                <br />
-                تسجيل الدخول
-              </div>
-            ) : (
-              <div>
                 <i className="fa fa-cog" aria-hidden="true"></i>
                 <br />
                 إعدادات الحساب
+              </div>
+            ) : (
+              <div>
+                <i className="fa fa-sign-in" aria-hidden="true"></i>
+                <br />
+                تسجيل الدخول
               </div>
             )}
           </a>
         </main>
       </Menu>
-      {logIn ? modal : ""}
+      <RegistrationModal showModal={showModal} handleClose={handleClose} />
     </div>
   );
 }

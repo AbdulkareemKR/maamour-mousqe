@@ -12,7 +12,7 @@ function MadalRegistration() {
 
   return (
     <div>
-      <Button onClick={handleShow}>register in petroly</Button>
+      <Button onClick={handleShow}>register in pethroly</Button>
       <Modal onHide={handleShow} show={state}>
         <img src={logo} alt="logo.png" className={styles.logo}></img>
         <Modal.Body>
