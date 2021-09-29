@@ -43,7 +43,6 @@ Note: Beware of modifying this element as it can break the animations - you shou
   background: #f8f8f8;
   padding: 0;
   font-size: 1.15em;
-  padding-top: 50px;
 }
 
 /* Morph shape necessary with bubble or elastic */
@@ -96,6 +95,10 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 .menu-item:hover {
   color: grey;
+}
+
+.menu-item:focus {
+  border: none;
 }
 
 #page-wrap {

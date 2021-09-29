@@ -1,7 +1,8 @@
 import Modal from "react-bootstrap/Modal";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Button } from "react-bootstrap";
+import { Button, ModalBody } from "react-bootstrap";
 import React, { useState } from "react";
+
 // import { MdVisibility, MdVisibilityOff, MdWarning } from "react-icons/md";
 
 function RegistrationModal(props) {
@@ -11,7 +12,9 @@ function RegistrationModal(props) {
         show={props.showModal}
         onHide={props.handleClose}
         aria-labelledby="contained-modal-title-vcenter"
-      ></Modal>
+      >
+        <ModalBody>this is the modal</ModalBody>
+      </Modal>
       <Button variant="primary">Launch vertically centered modal</Button>
     </div>
   );

@@ -1,6 +1,5 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import RegistrationPage from "./Component/registraion/RegistrationPage";
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import SidebarBootstrap from "./Component/sidebar/SidebarBootstrap";
@@ -16,9 +15,7 @@ function App() {
           <SidebarBootstrap />
         </nav>
         <Switch>
-          <Route path="/registration">
-            <RegistrationPage />
-          </Route>
+          <Route path="/registration">{/* <RegistrationPage /> */}</Route>
           <Route path="/">
             <HomePage />
           </Route>
