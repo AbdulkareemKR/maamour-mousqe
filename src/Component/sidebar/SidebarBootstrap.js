@@ -16,12 +16,12 @@ function SidebarBootstrap() {
   const handleClose = () => {
     setModal(false);
   };
-  const handleLogIn = () => {
-    setLogIn(true);
-  };
-  const handleLogOut = () => {
-    setLogIn(false);
-  };
+  // const handleLogIn = () => {
+  //   setLogIn(true);
+  // };
+  // const handleLogOut = () => {
+  //   setLogIn(false);
+  // };
 
   return (
     <div id="outer-container">
