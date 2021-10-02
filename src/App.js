@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import SidebarBootstrap from "./Component/sidebar/SidebarBootstrap";
 import "./Component/sidebar/sidebarStyle.css";
 import ReactDOM from "react-dom";
-import HomePage from "./Component/pages/homePage/HomePage.js";
+import HomePage from "./pages/homePage/HomePage.js";
 
 function App() {
   return (

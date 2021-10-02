@@ -2,11 +2,9 @@ import Modal from "react-bootstrap/Modal";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Button, Col, Row, Form } from "react-bootstrap";
 import styles from "./registrationModal.module.css";
-import { FiLink } from "react-icons/fi";
-import { HiTag } from "react-icons/hi";
 import { FaIdCard } from "react-icons/fa";
-import { MdDescription } from "react-icons/md";
-import { BsFillPeopleFill, BsCardImage, BsChatDotsFill } from "react-icons/bs";
+import { BsFillPeopleFill } from "react-icons/bs";
+import { HiTag } from "react-icons/hi";
 
 // import React, { useState } from "react";
 
@@ -27,6 +25,21 @@ function RegistrationModal(props) {
             تسجيل الدخول <BsFillPeopleFill className={styles.icons} />
           </Modal.Title>
         </Modal.Header>
+        <Row>
+          <Col>
+            <Button className={styles.createButton} onClick={props.handleLogIn}>
+              أنشئ الحساب
+            </Button>
+          </Col>
+          <Col>
+            <Button
+              className={styles.createButton}
+              onClick={props.handleLogOut}
+            >
+              سجل دخول
+            </Button>
+          </Col>
+        </Row>
         <Form className={styles.formStyle}>
           <Modal.Body className="show-grid">
             <Form.Group as={Row} className={styles.group}>
@@ -38,7 +51,7 @@ function RegistrationModal(props) {
                   required
                   className={styles.input}
                   type="text"
-                  placeholder="ادخل اسم المجموعة"
+                  placeholder="أدخل ايميلك"
                 />
               </Col>
             </Form.Group>
@@ -57,29 +70,57 @@ function RegistrationModal(props) {
               </Col>
             </Form.Group>
 
-            {/* <Form.Group as={Row} className={styles.group}>
-              <Form.Label className={styles.label} column sm="4">
-                <HiTag className={styles.icons} /> المرحلة الدراسية
-              </Form.Label>
-              <Col>
-                <Form.Control as="select" className={styles.input}>
-                  <option>تمهيدي</option>
-                  <option>متوسط</option>
-                  <option>ثانوي</option>
-                  <option>جامعي</option>
-                  <option>أب</option>
-                </Form.Control>
-              </Col>
-            </Form.Group> */}
+            {props.logIn ? (
+              <Form.Group as={Row} className={styles.group}>
+                <Form.Label className={styles.label} column sm="4">
+                  <FaIdCard className={styles.icons} />
+                  تأكيد كلمة المرور
+                </Form.Label>
+                <Col>
+                  <Form.Control
+                    required
+                    className={styles.input}
+                    type="password"
+                    placeholder="أعد ادخال كلمة المرور"
+                  />
+                </Col>
+              </Form.Group>
+            ) : (
+              ""
+              // <Form.Group as={Row} className={styles.group}>
+              //   <Form.Label className={styles.label} column sm="4">
+              //     <HiTag className={styles.icons} /> المرحلة الدراسية
+              //   </Form.Label>
+              //   <Col>
+              //     <Form.Control as="select" className={styles.input}>
+              //       <option>تمهيدي</option>
+              //       <option>متوسط</option>
+              //       <option>ثانوي</option>
+              //       <option>جامعي</option>
+              //       <option>أب</option>
+              //     </Form.Control>
+              //   </Col>
+              // </Form.Group>
+            )}
           </Modal.Body>
           <Modal.Footer className={styles.footer}>
-            <Button
-              className={styles.createButton}
-              type="submit"
-              // onClick={() => setModalShow(false)}
-            >
-              أنشئ الحساب
-            </Button>
+            {props.logIn ? (
+              <Button
+                className={styles.createButton}
+                type="submit"
+                // onClick={() => setModalShow(false)}
+              >
+                سجل دخول
+              </Button>
+            ) : (
+              <Button
+                className={styles.createButton}
+                type="submit"
+                // onClick={() => setModalShow(false)}
+              >
+                أنشئ الحساب
+              </Button>
+            )}
           </Modal.Footer>
         </Form>
       </Modal>

@@ -16,12 +16,12 @@ function SidebarBootstrap() {
   const handleClose = () => {
     setModal(false);
   };
-  // const handleLogIn = () => {
-  //   setLogIn(true);
-  // };
-  // const handleLogOut = () => {
-  //   setLogIn(false);
-  // };
+  const handleLogIn = () => {
+    setLogIn(true);
+  };
+  const handleLogOut = () => {
+    setLogIn(false);
+  };
 
   return (
     <div id="outer-container">
@@ -71,7 +71,13 @@ function SidebarBootstrap() {
           </Button>
         </main>
       </Menu>
-      <RegistrationModal showModal={showModal} handleClose={handleClose} />
+      <RegistrationModal
+        showModal={showModal}
+        logIn={logIn}
+        handleClose={handleClose}
+        handleLogIn={handleLogIn}
+        handleLogOut={handleLogOut}
+      />
     </div>
   );
 }
