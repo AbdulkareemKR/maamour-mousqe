@@ -74,6 +74,8 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .menu-item {
   display: block !important;
   color: black;
+  background-color: transparent;
+  border-color: transparent;
   text-decoration: none;
   margin-bottom: 20px;
   padding-bottom: 20px;
@@ -93,11 +95,13 @@ Note: Beware of modifying this element as it can break the animations - you shou
   color: grey;
 }
 
-.menu-item:hover {
+.menu-item:hover,
+.menu-item:focus {
   color: grey;
+  background-color: transparent;
+  border-color: transparent;
+  box-shadow: none !important;
 }
-
-
 
 #page-wrap {
   text-align: center;
