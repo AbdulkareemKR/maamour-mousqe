@@ -1,7 +1,12 @@
 import Modal from "react-bootstrap/Modal";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Button, Col, Row, Form } from "react-bootstrap";
-import styles from "./registrationModal.module.scss";
+import styles from "./registrationModal.module.css";
+import { FiLink } from "react-icons/fi";
+import { HiTag } from "react-icons/hi";
+import { FaIdCard } from "react-icons/fa";
+import { MdDescription } from "react-icons/md";
+import { BsFillPeopleFill, BsCardImage, BsChatDotsFill } from "react-icons/bs";
 
 // import React, { useState } from "react";
 
@@ -19,14 +24,14 @@ function RegistrationModal(props) {
             className={styles.title}
             id="contained-modal-title-vcenter"
           >
-            أنشئ مجموعة <BsFillPeopleFill className={styles.icons} />
+            تسجيل الدخول <BsFillPeopleFill className={styles.icons} />
           </Modal.Title>
         </Modal.Header>
         <Form className={styles.formStyle}>
           <Modal.Body className="show-grid">
             <Form.Group as={Row} className={styles.group}>
               <Form.Label className={styles.label} column sm="4">
-                <FaIdCard className={styles.icons} /> الاسم
+                <FaIdCard className={styles.icons} /> الايميل
               </Form.Label>
               <Col>
                 <Form.Control
@@ -39,81 +44,33 @@ function RegistrationModal(props) {
             </Form.Group>
 
             <Form.Group as={Row} className={styles.group}>
-              <Form.Label column sm="4">
-                <BsCardImage className={styles.icons} /> صورة العرض
+              <Form.Label className={styles.label} column sm="4">
+                <FaIdCard className={styles.icons} /> كلمة المرور
               </Form.Label>
               <Col>
-                {/* <input
-                  type="file"
-                  name="uploadfile"
-                  id="img"
-                  style={{ display: "none" }}
-                />
-                <label for="img">Click me to upload image</label> */}
                 <Form.Control
+                  required
                   className={styles.input}
-                  type="file"
-                  placeholder="اختر صورة العرض"
+                  type="password"
+                  placeholder="أدخل كلمة المرور"
                 />
               </Col>
             </Form.Group>
 
-            <Form.Group as={Row} className={styles.group}>
+            {/* <Form.Group as={Row} className={styles.group}>
               <Form.Label className={styles.label} column sm="4">
-                <HiTag className={styles.icons} /> نوع المجموعة
+                <HiTag className={styles.icons} /> المرحلة الدراسية
               </Form.Label>
               <Col>
                 <Form.Control as="select" className={styles.input}>
-                  <option>مواد دراسية</option>
-                  <option>أندية طلابية</option>
-                  <option>هوايات</option>
+                  <option>تمهيدي</option>
+                  <option>متوسط</option>
+                  <option>ثانوي</option>
+                  <option>جامعي</option>
+                  <option>أب</option>
                 </Form.Control>
               </Col>
-            </Form.Group>
-
-            <Form.Group as={Row} className={styles.group}>
-              <Form.Label className={styles.label} column sm="4">
-                <BsChatDotsFill className={styles.icons} /> المنصة
-              </Form.Label>
-              <Col>
-                <Form.Control as="select" className={styles.input}>
-                  <option>WhatsApp</option>
-                  <option>Telegram</option>
-                  <option>Discord</option>
-                </Form.Control>
-              </Col>
-            </Form.Group>
-
-            <Form.Group as={Row} className={styles.group}>
-              <Form.Label className={styles.label} column sm="3">
-                <MdDescription className={styles.icons} /> الوصف
-              </Form.Label>
-              {/* <FloatingLabel label="Comments"> */}
-              <Col>
-                <Form.Control
-                  required
-                  className={`${styles.input} ${styles.description}`}
-                  as="textarea"
-                  placeholder="اكتب وصفًا للمجموعة"
-                  style={{ height: "100px" }}
-                />
-                {/* </FloatingLabel> */}
-              </Col>
-            </Form.Group>
-
-            <Form.Group as={Row} className={styles.group}>
-              <Form.Label className={styles.label} column sm="3">
-                <FiLink className={styles.icons} /> الرابط
-              </Form.Label>
-              <Col>
-                <Form.Control
-                  required
-                  className={`${styles.input} ${styles.link}`}
-                  type="text"
-                  placeholder="ادخل رابط المجموعة"
-                />
-              </Col>
-            </Form.Group>
+            </Form.Group> */}
           </Modal.Body>
           <Modal.Footer className={styles.footer}>
             <Button
@@ -121,7 +78,7 @@ function RegistrationModal(props) {
               type="submit"
               // onClick={() => setModalShow(false)}
             >
-              أنشئ المجموعة
+              أنشئ الحساب
             </Button>
           </Modal.Footer>
         </Form>
