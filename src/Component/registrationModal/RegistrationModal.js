@@ -27,15 +27,15 @@ function RegistrationModal(props) {
         </Modal.Header>
         <Row>
           <Col>
-            <Button className={styles.createButton} onClick={props.handleLogIn}>
-              أنشئ الحساب
-            </Button>
-          </Col>
-          <Col>
             <Button
               className={styles.createButton}
               onClick={props.handleLogOut}
             >
+              أنشئ الحساب
+            </Button>
+          </Col>
+          <Col>
+            <Button className={styles.createButton} onClick={props.handleLogIn}>
               سجل دخول
             </Button>
           </Col>
@@ -71,36 +71,38 @@ function RegistrationModal(props) {
             </Form.Group>
 
             {props.logIn ? (
-              <Form.Group as={Row} className={styles.group}>
-                <Form.Label className={styles.label} column sm="4">
-                  <FaIdCard className={styles.icons} />
-                  تأكيد كلمة المرور
-                </Form.Label>
-                <Col>
-                  <Form.Control
-                    required
-                    className={styles.input}
-                    type="password"
-                    placeholder="أعد ادخال كلمة المرور"
-                  />
-                </Col>
-              </Form.Group>
-            ) : (
               ""
-              // <Form.Group as={Row} className={styles.group}>
-              //   <Form.Label className={styles.label} column sm="4">
-              //     <HiTag className={styles.icons} /> المرحلة الدراسية
-              //   </Form.Label>
-              //   <Col>
-              //     <Form.Control as="select" className={styles.input}>
-              //       <option>تمهيدي</option>
-              //       <option>متوسط</option>
-              //       <option>ثانوي</option>
-              //       <option>جامعي</option>
-              //       <option>أب</option>
-              //     </Form.Control>
-              //   </Col>
-              // </Form.Group>
+            ) : (
+              <div>
+                <Form.Group as={Row} className={styles.group}>
+                  <Form.Label className={styles.label} column sm="4">
+                    <FaIdCard className={styles.icons} />
+                    تأكيد كلمة المرور
+                  </Form.Label>
+                  <Col>
+                    <Form.Control
+                      required
+                      className={styles.input}
+                      type="password"
+                      placeholder="أعد ادخال كلمة المرور"
+                    />
+                  </Col>
+                </Form.Group>
+                <Form.Group as={Row} className={styles.group}>
+                  <Form.Label className={styles.label} column sm="4">
+                    <HiTag className={styles.icons} /> المرحلة الدراسية
+                  </Form.Label>
+                  <Col>
+                    <Form.Control as="select" className={styles.input}>
+                      <option>تمهيدي</option>
+                      <option>متوسط</option>
+                      <option>ثانوي</option>
+                      <option>جامعي</option>
+                      <option>أب</option>
+                    </Form.Control>
+                  </Col>
+                </Form.Group>
+              </div>
             )}
           </Modal.Body>
           <Modal.Footer className={styles.footer}>
