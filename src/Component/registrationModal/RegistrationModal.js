@@ -5,8 +5,6 @@ import styles from "./registrationModal.module.scss";
 
 // import React, { useState } from "react";
 
-// import { MdVisibility, MdVisibilityOff, MdWarning } from "react-icons/md";
-
 function RegistrationModal(props) {
   return (
     <div>
