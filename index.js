@@ -25,3 +25,11 @@ const PORT = process.env.PORT || 3001;
 appExpress.listen(PORT, function () {
   console.log("running on port...");
 });
+
+//$ git init
+//$ heroku git:remote -a maamour-backend
+
+//////////PUSH TO HEROKU////////////////
+//$ git add .
+//$ git commit -am "make it better"
+//$ git push heroku master
