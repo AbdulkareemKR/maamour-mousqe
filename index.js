@@ -1,8 +1,9 @@
 //mysql://bbb32223c9ea97:303c0a01@us-cdbr-east-04.cleardb.com/heroku_35584d16ac6b3a9?reconnect=true
-const appExpress = require("express");
+const express = require("express");
 const mysql = require("mysql");
 const bodyParser = require("body-parser");
 const cors = require("cors");
+const appExpress = express();
 
 const db = mysql.createPool({
   host: "us-cdbr-east-04.cleardb.com",
@@ -16,6 +17,9 @@ appExpress.use(cors());
 appExpress.use(express.json());
 appExpress.use(bodyParser.urlencoded({ extended: true }));
 ///////////////////////////////////////////////
+appExpress.get("/", (req, res) => {
+  res.send("<h2>This is maamour backend</h2>");
+});
 
 const PORT = process.env.PORT || 3001;
 appExpress.listen(PORT, function () {
