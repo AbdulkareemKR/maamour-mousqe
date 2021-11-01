@@ -18,6 +18,7 @@ import "./Component/Sidebar/sidebarStyle.css";
 import ReactDOM from "react-dom";
 import HomePage from "./pages/homePage/HomePage.js";
 import Header from "./Component/Header/Header";
+import Footer from "./Component/Footer/Footer";
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
             <HomePage />
           </Route>
         </Switch>
+        <Footer />
       </div>
     </Router>
   );
