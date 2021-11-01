@@ -3,8 +3,10 @@
 
 .bm-burger-button {
   position: fixed;
-  width: 36px;
-  height: 30px;
+  width: 2.5vw;
+  min-width: 25px;
+  height: 2.5vw;
+  min-height: 25px;
   right: 32px;
   top: 21px;
 }
@@ -33,10 +35,12 @@ Note: Beware of modifying this element as it can break the animations - you shou
 */
 .bm-menu-wrap {
   position: fixed;
+  top: 0;
   height: 100%;
-  width: 80px !important;
-  z-index: -1 !important;
+  width: 5px !important;
+  z-index: 20 !important;
   box-shadow: 0 10px 10px rgba(128, 128, 128, 0.527);
+  display: table;
 }
 
 /* General sidebar styles */
@@ -55,7 +59,6 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .bm-item-list {
   color: #b8b7ad;
   padding: 0.8em;
-  display: block;
 }
 
 /* Individual item */
@@ -73,27 +76,30 @@ Note: Beware of modifying this element as it can break the animations - you shou
 } */
 
 .menu-item {
-  display: block !important;
   color: black;
   background-color: transparent;
   border-color: transparent;
   text-decoration: none;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
+  margin-bottom: 25px;
   border-bottom: solid 1px silver;
   direction: rtl;
   padding-right: 0;
   margin-right: 0;
   font-weight: 700;
-  font-size: 1rem;
+  font-size: calc(8px + 0.5vw);
   font-family: "Cairo", sans-serif;
   display: inline-block;
   text-align: center;
   transition: 0.3s;
 }
 
+.menu-item:first-child {
+  margin-top: 70px;
+}
+
 .menu-item:hover .fa {
   color: grey;
+  size: 1px !important;
 }
 
 .menu-item:hover,
