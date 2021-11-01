@@ -1,7 +1,6 @@
 import { slide as Menu } from "react-burger-menu";
 import "./sidebarStyle.css";
 import React, { useState } from "react";
-import Header from "../header/Header";
 import { Button } from "react-bootstrap";
 import RegistrationModal from "../registrationModal/RegistrationModal";
 
@@ -25,9 +24,6 @@ function SidebarBootstrap() {
 
   return (
     <div id="outer-container">
-      <header>
-        <Header />
-      </header>
       <Menu right pageWrapId={"page-wrap"} outerContainerId={"outer-container"}>
         <main id="page-wrap">
           <Button id="home" className="menu-item" href="/">

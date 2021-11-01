@@ -17,12 +17,14 @@ import SidebarBootstrap from "./Component/sidebar/SidebarBootstrap";
 import "./Component/sidebar/sidebarStyle.css";
 import ReactDOM from "react-dom";
 import HomePage from "./pages/homePage/HomePage.js";
+import Header from "./Component/header/Header";
 
 function App() {
   return (
     <Router>
       <div>
         <nav>
+          <Header />
           <SidebarBootstrap />
         </nav>
         <Switch>
