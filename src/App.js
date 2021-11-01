@@ -14,7 +14,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import SidebarBootstrap from "./Component/Sidebar/SidebarBootstrap";
-import "./Component/Sidebar/sidebarStyle.css";
 import ReactDOM from "react-dom";
 import HomePage from "./pages/HomePage/HomePage.js";
 import Header from "./Component/Header/Header";
