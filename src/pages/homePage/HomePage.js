@@ -1,7 +1,8 @@
 import React from "react";
+import styles from "./Home.module.css";
 
 function MainPage() {
-  return <div>home</div>;
+  return <div className={styles.container}>home</div>;
 }
 
 export default MainPage;
