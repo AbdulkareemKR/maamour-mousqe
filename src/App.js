@@ -13,7 +13,7 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import SidebarBootstrap from "./Component/Sidebar/SidebarBootstrap";
+import SidebarBootstrap from "./Component/Sidebar/SidebarBootstrap.js";
 import ReactDOM from "react-dom";
 import HomePage from "./pages/HomePage/HomePage.js";
 import Header from "./Component/Header/Header";
