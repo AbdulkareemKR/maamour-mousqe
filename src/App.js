@@ -13,11 +13,11 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import SidebarBootstrap from "./Component/sidebar/SidebarBootstrap";
-import "./Component/sidebar/sidebarStyle.css";
+import SidebarBootstrap from "./Component/Sidebar/SidebarBootstrap";
+import "./Component/Sidebar/sidebarStyle.css";
 import ReactDOM from "react-dom";
 import HomePage from "./pages/homePage/HomePage.js";
-import Header from "./Component/header/Header";
+import Header from "./Component/Header/Header";
 
 function App() {
   return (
