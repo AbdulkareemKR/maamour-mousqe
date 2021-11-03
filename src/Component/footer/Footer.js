@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./footer.module.css";
-import BlackLogo from "../Images/maamour-black-logo.png";
+import BlackLogo from "../images/maamour-black-logo.png";
 
 function Footer() {
   return (
