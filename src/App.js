@@ -8,7 +8,7 @@ import SidebarBootstrap from "./Component/sidebar/SidebarBootstrap";
 import ReactDOM from "react-dom";
 import HomePage from "./pages/homePage/HomePage.js";
 import Header from "./Component/header/Header.js";
-import Footer from "./Component/footer/Footer.js";
+// import Footer from "./Component/footer/Footer.js";
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
         <nav>
           <Header />
           <SidebarBootstrap />
-          <Footer />
+          {/* <Footer /> */}
         </nav>
         <Switch>
           <Route path="/registration">{/* <RegistrationPage /> */}</Route>
