@@ -21,6 +21,7 @@
   height: 20vw;
   max-width: 140px;
   max-height: 140px;
+  transform: translateX(13%);
 }
 
 .title {
@@ -30,7 +31,6 @@
   font-weight: 700;
   padding-top: 8px;
   text-align: center;
-  transform: translateX(-13px);
   padding-bottom: 20px;
   position: relative;
 }
