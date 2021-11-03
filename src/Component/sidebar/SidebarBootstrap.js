@@ -2,7 +2,7 @@ import { slide as Menu } from "react-burger-menu";
 import "./sidebarStyle.css";
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
-import RegistrationModal from "../RegistrationModal/RegistrationModal";
+import RegistrationModal from "../registrationModal/RegistrationModal";
 
 function SidebarBootstrap() {
   const [showModal, setModal] = useState(false);
