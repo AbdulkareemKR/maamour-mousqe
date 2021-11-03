@@ -17,7 +17,6 @@ function App() {
         <nav>
           <Header />
           <SidebarBootstrap />
-          <Footer />
         </nav>
         <Switch>
           <Route path="/registration">{/* <RegistrationPage /> */}</Route>
@@ -25,6 +24,7 @@ function App() {
             <HomePage />
           </Route>
         </Switch>
+        <Footer />
       </div>
     </Router>
   );
