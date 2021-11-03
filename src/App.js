@@ -7,6 +7,7 @@ import SidebarBootstrap from "./Component/sidebar/SidebarBootstrap";
 import ReactDOM from "react-dom";
 import HomePage from "./pages/homePage/HomePage.js";
 import Header from "./Component/header/Header";
+import Footer from "./Component/footer/Footer";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <nav>
           <Header />
           <SidebarBootstrap />
+          <Footer />
         </nav>
         <Switch>
           <Route path="/registration">{/* <RegistrationPage /> */}</Route>

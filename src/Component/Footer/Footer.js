@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./Footer.module.css";
+import styles from "./footer.module.css";
 import BlackLogo from "../Images/maamour-black-logo.png";
 
 function Footer() {
