@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./header.module.css";
-import MaamourLogo from "../Images/maamourLogo.png";
+import MaamourLogo from "../images/maamourLogo.png";
 
 function Header() {
   return (
