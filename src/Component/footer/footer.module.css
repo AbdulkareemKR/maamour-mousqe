@@ -5,12 +5,15 @@
   z-index: -20 !important;
   display: flex;
   justify-content: center;
+  position: relative;
 }
 
 .logoContainer {
-  display: table;
-  vertical-align: middle;
   margin-top: 10px;
+  position: absolute;
+  left: 50%;
+  top: 5%;
+  transform: translateX(-50%);
 }
 
 .BlackLogo {
