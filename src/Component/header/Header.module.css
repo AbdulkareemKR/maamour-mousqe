@@ -21,9 +21,9 @@
 .title {
   font-family: "Cairo", sans-serif;
   text-align: center;
-  vertical-align: baseline;
   font-weight: 700;
   padding-top: 8px;
+  text-align: center;
 }
 
 .titleCustom {

@@ -1,6 +1,45 @@
 .container {
   background-color: #333333;
-  height: 200px;
+  height: 300px;
   width: 100vw;
   z-index: -20 !important;
+  display: flex;
+  justify-content: center;
+}
+
+.logoContainer {
+  display: table;
+  vertical-align: middle;
+  margin-top: 10px;
+}
+
+.BlackLogo {
+  width: 20vw;
+  height: 20vw;
+  max-width: 140px;
+  max-height: 140px;
+}
+
+.title {
+  color: white;
+  font-family: "Cairo", sans-serif;
+  text-align: center;
+  font-weight: 700;
+  padding-top: 8px;
+  text-align: center;
+  transform: translateX(-13px);
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.title::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 150%;
+  border-bottom: solid 1px white;
+}
+.titleCustom {
+  color: #d49847;
 }
