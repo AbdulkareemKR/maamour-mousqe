@@ -5,9 +5,25 @@
   z-index: -20 !important;
   display: flex;
   justify-content: center;
-  position: relative;
   font-family: "Cairo", sans-serif;
   color: white;
+}
+
+.infoContainer {
+  direction: rtl;
+  text-align: center;
+  size: 100%;
+}
+
+.contact,
+.location {
+  transform: translateY(20%);
+  font-size: calc(13px + 2vw);
+}
+
+.contact:hover,
+.location:hover {
+  cursor: pointer;
 }
 
 .logoContainer {
@@ -56,21 +72,9 @@
   margin-top: calc(15px + 25vmin);
 }
 
-.infoContainer {
-  direction: rtl;
-  text-align: center;
-  size: 100%;
-}
-
 h5 {
   font-family: inherit;
   font-size: calc(10px + 2vw) !important;
-}
-
-.contact,
-.location {
-  transform: translateY(20%);
-  font-size: 20px;
 }
 
 .icon {
