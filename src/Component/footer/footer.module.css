@@ -10,10 +10,6 @@
 
 .logoContainer {
   margin-top: 10px;
-  position: absolute;
-  left: 50%;
-  top: 5%;
-  transform: translateX(-50%);
 }
 
 .BlackLogo {
@@ -21,18 +17,24 @@
   height: 20vw;
   max-width: 140px;
   max-height: 140px;
-  transform: translateX(13%);
+  transform: translateX(-50%);
+  position: absolute;
+  left: 50%;
+  top: 5%;
 }
 
 .title {
   color: white;
   font-family: "Cairo", sans-serif;
+  font-size: calc(10px + 3vmin);
   text-align: center;
   font-weight: 700;
-  padding-top: 8px;
   text-align: center;
   padding-bottom: 20px;
-  position: relative;
+  transform: translateX(-50%);
+  position: absolute;
+  left: 50%;
+  top: calc(5% + 21vmin);
 }
 
 /* .title::after {

@@ -12,8 +12,9 @@
   height: 50px;
   width: 50px;
   position: absolute;
-  left: 21px;
-  top: 10px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   background-color: #373a473a;
   border-radius: 20px;
 }
@@ -21,7 +22,7 @@
 .title {
   font-family: "Cairo", sans-serif;
   text-align: center;
-  font-weight: 700;
+  font-weight: 900;
   padding-top: 8px;
   text-align: center;
 }
