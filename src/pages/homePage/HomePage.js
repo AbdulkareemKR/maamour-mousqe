@@ -1,6 +1,10 @@
 import React from "react";
 import styles from "./home.module.css";
 import maamourFront from "../../Component/images/maamour-front.webp";
+import maamourGarden from "../../Component/images/maamour-garden.jpg";
+import maamourIncubation from "../../Component/images/maamour-incubation.jpg";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
 function MainPage() {
   return (
@@ -25,6 +29,22 @@ function MainPage() {
         يمكن أن يلعب فيها الأبناء أمام أنظار آبائهم وأمهاتهم، كما يحوي المسجد
         صالات لتعليم القرآن وصالة متعددة الاستخدام لأهل الحي.
       </p>
+      <Row>
+        <Col>
+          <img
+            src={maamourGarden}
+            alt="واجهة معمور"
+            className={styles.maamourFront}
+          ></img>
+        </Col>
+        <Col>
+          <img
+            src={maamourIncubation}
+            alt="واجهة معمور"
+            className={styles.maamourFront}
+          ></img>
+        </Col>
+      </Row>
       <p>
         على سطح المسجد يوجد ممشى وملعب رياضي لكرة الطائرة، كما توجد فيه صيدلية
         يعود ريعها على أعمال خيرية وتبيع الأدوية بأسعار مخفضة، بالإضافة إلى صراف
