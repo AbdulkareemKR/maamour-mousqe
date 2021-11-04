@@ -12,7 +12,7 @@
 }
 
 .icons {
-  color: #784da8;
+  color: #d49747;
   font-size: 1.3em;
   margin: 1px;
 }
@@ -26,8 +26,8 @@
   border-radius: 23px;
   background-color: unset !important;
   font-weight: bold;
-  border: #784da8 solid 1px !important;
-  color: #784da8 !important;
+  border: #d49747 solid 1px !important;
+  color: #d49747 !important;
   transition: 100ms ease-in;
   box-shadow: unset !important;
   -webkit-transition: 100ms ease-in;
@@ -37,7 +37,7 @@
 }
 
 .createButton:hover {
-  background-color: #784da8 !important;
+  background-color: #d49747 !important;
   color: white !important;
 }
 

@@ -67,6 +67,7 @@
   color: #d49847;
   color: white;
   margin-top: calc(15px + 25vmin);
+  display: inline-block;
 }
 
 h5 {
