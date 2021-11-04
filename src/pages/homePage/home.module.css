@@ -7,4 +7,5 @@
   font-size: 20px;
   background-color: rgba(128, 128, 128, 0.349);
   border-radius: 15px;
+  display: inline-block;
 }
