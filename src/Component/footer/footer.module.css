@@ -64,11 +64,13 @@
 
 h5 {
   font-family: inherit;
+  font-size: calc(10px + 2vw) !important;
 }
 
 .contact,
 .location {
   transform: translateY(20%);
+  font-size: 20px;
 }
 
 @media only screen and (max-width: 500px) {

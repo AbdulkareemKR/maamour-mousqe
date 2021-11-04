@@ -13,14 +13,17 @@ function Footer() {
       <Container fluid className={styles.infoContainer}>
         <Row>
           <Col className={styles.contact}>
-            <h5>تواصل معنا</h5>
+            <h5>
+              تواصل
+              <br /> معنا
+            </h5>
             <Row>
-              <Col>
-                <AiFillTwitterCircle />
-              </Col>
-              <Col>
+              <Row>
                 <IoLogoWhatsapp />
-              </Col>
+              </Row>
+              <Row>
+                <AiFillTwitterCircle />
+              </Row>
             </Row>
           </Col>
           <Col className={styles.logoContainer}>
