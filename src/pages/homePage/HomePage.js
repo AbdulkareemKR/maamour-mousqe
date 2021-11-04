@@ -1,9 +1,15 @@
 import React from "react";
 import styles from "./home.module.css";
+import maamourFront from "../../Component/images/maamour-front.webp";
 
 function MainPage() {
   return (
     <div className={styles.container}>
+      <img
+        src={maamourFront}
+        alt="واجهة معمور"
+        className={styles.maamourFront}
+      ></img>
       <p>
         يُعد مسجد معمور بحي قرطبة في العاصمة السعودية الرياض نموذجا للمسجد
         العصري الصديق للبيئة، والمصمم بأحدث التقنيات الحديثة والخدمات المتكاملة

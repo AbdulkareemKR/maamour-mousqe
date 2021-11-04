@@ -1,11 +1,21 @@
 .container {
-  height: 100vh;
   direction: rtl;
   font-family: "Cairo", sans-serif;
   margin: 15px 45px;
   padding: 15px 40px;
   font-size: 20px;
-  background-color: rgba(128, 128, 128, 0.349);
+  background-color: rgba(255, 255, 255, 0.644);
   border-radius: 15px;
   display: inline-block;
+}
+
+.maamourFront {
+  width: 100%;
+  border-radius: 30px;
+  text-align: center;
+  opacity: 0.9;
+}
+
+p {
+  border-spacing: 10px;
 }
