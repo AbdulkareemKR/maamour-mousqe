@@ -52,5 +52,5 @@
   color: #d49847;
   font-family: "Cairo", sans-serif;
   color: white;
-  margin-top: 28vmin;
+  margin-top: calc(15px + 25vmin);
 }

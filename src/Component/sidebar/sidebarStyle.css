@@ -37,10 +37,10 @@ Note: Beware of modifying this element as it can break the animations - you shou
   position: fixed;
   top: 0;
   height: 100%;
-  width: 5px !important;
+  /* max-width: 100px !important; */
+  width: 80px !important;
   z-index: 20 !important;
   box-shadow: 0 10px 10px rgba(128, 128, 128, 0.527);
-  display: table;
 }
 
 /* General sidebar styles */
