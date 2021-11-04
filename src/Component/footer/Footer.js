@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./footer.module.css";
-import BlackLogo from "../images/maamour-black-logo.png";
+import BlackLogo from "../images/black-logo.png";
 import { AiFillTwitterCircle } from "react-icons/ai";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { HiLocationMarker } from "react-icons/hi";
