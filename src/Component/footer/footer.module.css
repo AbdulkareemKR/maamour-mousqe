@@ -6,6 +6,8 @@
   display: flex;
   justify-content: center;
   position: relative;
+  font-family: "Cairo", sans-serif;
+  color: white;
 }
 
 .logoContainer {
@@ -50,7 +52,27 @@
 
 .subTitle {
   color: #d49847;
-  font-family: "Cairo", sans-serif;
   color: white;
   margin-top: calc(15px + 25vmin);
+}
+
+.infoContainer {
+  direction: rtl;
+  text-align: center;
+  size: 100%;
+}
+
+h5 {
+  font-family: inherit;
+}
+
+.contact,
+.location {
+  transform: translateY(20%);
+}
+
+@media only screen and (max-width: 500px) {
+  .container {
+    height: 200px;
+  }
 }
