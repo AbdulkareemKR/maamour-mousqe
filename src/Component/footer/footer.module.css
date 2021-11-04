@@ -2,7 +2,6 @@
   background-color: #333333;
   height: 40vh;
   width: 100vw;
-  z-index: -20 !important;
   display: flex;
   justify-content: center;
   font-family: "Cairo", sans-serif;
@@ -14,17 +13,14 @@
   direction: rtl;
   text-align: center;
   size: 100%;
+  background-color: #333333;
 }
 
 .contact,
 .location {
   transform: translateY(20%);
   font-size: calc(13px + 2vw);
-}
-
-.contact:hover,
-.location:hover {
-  cursor: pointer;
+  display: inline;
 }
 
 .logoContainer {
@@ -75,7 +71,9 @@
 
 h5 {
   font-family: inherit;
-  font-size: calc(10px + 2vw) !important;
+  font-size: calc(10px + 1.5vw);
+  padding-bottom: 10px;
+  /* border-bottom: solid 1px white; */
 }
 
 .icon {
@@ -83,6 +81,7 @@ h5 {
 }
 
 .icon:hover {
+  color: #d49747;
   filter: brightness(0.85);
   cursor: pointer;
 }

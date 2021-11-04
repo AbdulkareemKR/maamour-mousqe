@@ -15,10 +15,7 @@ function Footer() {
         <Row>
           <Col className={styles.contact}>
             <Row>
-              <h5>
-                تواصل
-                <br /> معنا
-              </h5>
+              <h5>تواصل معنا</h5>
             </Row>
             <Row>
               <a href={"/"} className={styles.icon}>
