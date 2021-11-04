@@ -18,9 +18,9 @@
 
 .contact,
 .location {
-  transform: translateY(20%);
   font-size: calc(13px + 2vw);
   display: inline;
+  margin: auto;
 }
 
 .logoContainer {
@@ -78,6 +78,7 @@ h5 {
 
 .icon {
   color: #d49847;
+  margin: 0 10px;
 }
 
 .icon:hover {

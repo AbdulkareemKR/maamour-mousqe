@@ -17,16 +17,14 @@ function Footer() {
             <Row>
               <h5>تواصل معنا</h5>
             </Row>
-            <Row>
+            <div>
               <a href={"/"} className={styles.icon}>
                 <IoLogoWhatsapp />
               </a>
-            </Row>
-            <Row>
               <a href={"/"} className={styles.icon}>
                 <AiFillTwitterCircle />
               </a>
-            </Row>
+            </div>
           </Col>
           <Col className={styles.logoContainer}>
             <img
