@@ -1,6 +1,6 @@
 .container {
   background-color: #333333;
-  height: 300px;
+  height: 40vh;
   width: 100vw;
   z-index: -20 !important;
   display: flex;
@@ -26,8 +26,6 @@
 .title {
   color: white;
   font-family: "Cairo", sans-serif;
-  font-size: calc(10px + 3vmin);
-  text-align: center;
   font-weight: 700;
   text-align: center;
   padding-bottom: 20px;
@@ -45,6 +43,14 @@
   width: 150%;
   border-bottom: solid 1px white;
 } */
+
 .titleCustom {
   color: #d49847;
+}
+
+.subTitle {
+  color: #d49847;
+  font-family: "Cairo", sans-serif;
+  color: white;
+  margin-top: 28vmin;
 }

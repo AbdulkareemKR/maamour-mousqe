@@ -12,9 +12,8 @@
   height: 50px;
   width: 50px;
   position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  left: 21px;
+  top: 10px;
   background-color: #373a473a;
   border-radius: 20px;
 }

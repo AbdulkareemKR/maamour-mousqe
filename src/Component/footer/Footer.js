@@ -14,6 +14,7 @@ function Footer() {
         <h3 className={styles.title}>
           مسجد <span className={styles.titleCustom}>معمور</span>
         </h3>
+        <p className={styles.subTitle}>لبناء مسلم متكامل</p>
       </div>
     </footer>
   );
