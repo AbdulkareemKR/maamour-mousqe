@@ -3,6 +3,7 @@ import styles from "./footer.module.css";
 import BlackLogo from "../images/maamour-black-logo.png";
 import { AiFillTwitterCircle } from "react-icons/ai";
 import { IoLogoWhatsapp } from "react-icons/io";
+import { HiLocationMarker } from "react-icons/hi";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -13,17 +14,21 @@ function Footer() {
       <Container fluid className={styles.infoContainer}>
         <Row>
           <Col className={styles.contact}>
-            <h5>
-              تواصل
-              <br /> معنا
-            </h5>
             <Row>
-              <Row>
+              <h5>
+                تواصل
+                <br /> معنا
+              </h5>
+            </Row>
+            <Row>
+              <a href={"/"} className={styles.icon}>
                 <IoLogoWhatsapp />
-              </Row>
-              <Row>
+              </a>
+            </Row>
+            <Row>
+              <a href={"/"} className={styles.icon}>
                 <AiFillTwitterCircle />
-              </Row>
+              </a>
             </Row>
           </Col>
           <Col className={styles.logoContainer}>
@@ -39,6 +44,9 @@ function Footer() {
           </Col>
           <Col className={styles.location}>
             <h5>موقع المسجد</h5>
+            <a href={"/"} className={styles.icon}>
+              <HiLocationMarker />
+            </a>
           </Col>
         </Row>
       </Container>
