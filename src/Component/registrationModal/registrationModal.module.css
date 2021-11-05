@@ -17,12 +17,16 @@
   margin: 1px;
 }
 
+.registrationButtons {
+  margin: auto;
+}
+
 .createButton {
   margin: auto;
   font-weight: inherit;
   font-family: inherit;
   font-size: 0.8rem;
-  width: 70%;
+  width: 110%;
   border-radius: 23px;
   background-color: unset !important;
   font-weight: bold;
@@ -39,6 +43,10 @@
 .createButton:hover {
   background-color: #d49747 !important;
   color: white !important;
+}
+
+.submit {
+  width: 70%;
 }
 
 .input {

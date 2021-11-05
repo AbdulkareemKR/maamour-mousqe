@@ -25,18 +25,18 @@ function RegistrationModal(props) {
             تسجيل الدخول <BsFillPeopleFill className={styles.icons} />
           </Modal.Title>
         </Modal.Header>
-        <Row>
+        <Row className={styles.registrationButtons}>
           <Col>
             <Button
               className={styles.createButton}
               onClick={props.handleLogOut}
             >
-              أنشئ الحساب
+              إنشاء حساب
             </Button>
           </Col>
           <Col>
             <Button className={styles.createButton} onClick={props.handleLogIn}>
-              سجل دخول
+              تسجيل دخول
             </Button>
           </Col>
         </Row>
@@ -108,7 +108,7 @@ function RegistrationModal(props) {
           <Modal.Footer className={styles.footer}>
             {props.logIn ? (
               <Button
-                className={styles.createButton}
+                className={`${styles.createButton} ${styles.submit}`}
                 type="submit"
                 // onClick={() => setModalShow(false)}
               >
@@ -116,7 +116,7 @@ function RegistrationModal(props) {
               </Button>
             ) : (
               <Button
-                className={styles.createButton}
+                className={`${styles.createButton} ${styles.submit}`}
                 type="submit"
                 // onClick={() => setModalShow(false)}
               >

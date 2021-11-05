@@ -6,7 +6,7 @@ import RegistrationModal from "../registrationModal/RegistrationModal";
 
 function SidebarBootstrap() {
   const [showModal, setModal] = useState(false);
-  const [logIn, setLogIn] = useState(false);
+  const [logIn, setLogIn] = useState(true);
 
   const fireModal = () => {
     console.log("Modal launched!");
