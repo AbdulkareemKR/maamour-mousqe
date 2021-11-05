@@ -7,9 +7,9 @@ import RegistrationModal from "../registrationModal/RegistrationModal";
 function SidebarBootstrap() {
   const [showModal, setModal] = useState(false);
   const [logIn, setLogIn] = useState(true);
+  const [page, setPage] = useState("home");
 
   const fireModal = () => {
-    console.log("Modal launched!");
     setModal(true);
   };
   const handleClose = () => {
@@ -22,34 +22,66 @@ function SidebarBootstrap() {
     setLogIn(false);
   };
 
+  const pageClick = (page) => {
+    console.log(page);
+    setPage(page);
+  };
+
   return (
     <div id="outer-container">
       <Menu right pageWrapId={"page-wrap"} outerContainerId={"outer-container"}>
         <main id="page-wrap">
-          <Button id="home" className="menu-item" href="/">
+          <Button
+            id="home"
+            className={`menu-item ${page === "home" ? "acitve" : ""}`}
+            href="/"
+            onClick={(e) => pageClick(e.target.id)}
+          >
             <i className="fa fa-home"></i>
             <br />
             الرئيسية
           </Button>
-          <Button id="program" className="menu-item" href="/program">
+          <Button
+            id="program"
+            className={`menu-item ${page === "program" ? "acitve" : ""}`}
+            // href="/program"
+            onClick={(e) => pageClick(e.target.id)}
+          >
             <i className="fa fa-users" aria-hidden="true"></i>
             <br />
             برامجنا
           </Button>
-          <Button id="about" className="menu-item" href="/about">
+          <Button
+            id="about"
+            className={`menu-item ${page === "about" ? "acitve" : ""}`}
+            // href="/about"
+            onClick={(e) => pageClick(e.target.id)}
+          >
             <i style={{ fontSize: "2.5rem" }} className="fa">
               &#xf128;
             </i>
             <br />
             عن معمور
           </Button>
-          <Button id="contact" className="menu-item" href="/contact">
+          <Button
+            id="contact"
+            className={`menu-item ${page === "contact" ? "acitve" : ""}`}
+            // href="/contact"
+            onClick={(e) => pageClick(e.target.id)}
+          >
             <i className="fa fa-phone" aria-hidden="true"></i>
             <br />
             تواصل معنا
           </Button>
-          <Button onClick={fireModal} id="setting" className="menu-item">
-            {logIn ? (
+          <Button
+            id="setting"
+            className={`menu-item ${page === "setting" ? "acitve" : ""}`}
+            onClick={(e) => {
+              pageClick(e.target.id);
+              fireModal();
+            }}
+          >
+            {/* {logIn ? (
               <div
               // onClick={handleLogIn}
               >
@@ -57,13 +89,13 @@ function SidebarBootstrap() {
                 <br />
                 إعدادات الحساب
               </div>
-            ) : (
-              <div>
-                <i className="fa fa-sign-in" aria-hidden="true"></i>
-                <br />
-                تسجيل الدخول
-              </div>
-            )}
+            ) : ( */}
+            <div>
+              <i className="fa fa-sign-in" aria-hidden="true"></i>
+              <br />
+              تسجيل الدخول
+            </div>
+            {/* )} */}
           </Button>
         </main>
       </Menu>

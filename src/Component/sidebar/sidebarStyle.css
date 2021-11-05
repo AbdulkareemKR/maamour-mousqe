@@ -34,9 +34,10 @@ Note: Beware of modifying this element as it can break the animations - you shou
   top: 0;
   height: 100%;
   /* max-width: 100px !important; */
-  width: 80px !important;
+  width: 75px !important;
   z-index: 20 !important;
   box-shadow: 0 10px 10px rgba(128, 128, 128, 0.527);
+  margin-left: 2px;
 }
 
 /* General sidebar styles */
@@ -99,16 +100,26 @@ Note: Beware of modifying this element as it can break the animations - you shou
 }
 
 .menu-item:hover .fa {
-  color: grey;
   size: 1px !important;
+  color: white;
 }
 
 .menu-item:hover,
 .menu-item:focus {
-  color: grey;
+  background-color: #d49847 !important;
+  color: white;
   background-color: transparent;
   border-color: transparent;
   box-shadow: none !important;
+}
+
+.acitve {
+  background-color: #d49847 !important;
+  color: white;
+}
+
+.acitve .fa {
+  color: white;
 }
 
 #page-wrap {
@@ -123,5 +134,12 @@ Note: Beware of modifying this element as it can break the animations - you shou
 }
 
 .fa:hover {
-  color: grey;
+  background-color: #d49847;
+  color: white;
+}
+
+@media only screen and (max-width: 500px) {
+  .bm-menu-wrap {
+    width: 60px !important;
+  }
 }
