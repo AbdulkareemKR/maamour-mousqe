@@ -76,10 +76,7 @@ function SidebarBootstrap() {
           <Button
             id="setting"
             className={`menu-item ${page === "setting" ? "acitve" : ""}`}
-            onClick={(e) => {
-              pageClick(e.target.id);
-              fireModal();
-            }}
+            onClick={fireModal}
           >
             {/* {logIn ? (
               <div

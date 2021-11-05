@@ -95,6 +95,13 @@ Note: Beware of modifying this element as it can break the animations - you shou
   transition: 0.3s;
 }
 
+.menu-item:focus {
+  background-color: transparent;
+  border-color: transparent;
+  box-shadow: none !important;
+  color: white;
+}
+
 .menu-item:first-child {
   margin-top: 70px;
 }
@@ -104,8 +111,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
   color: white;
 }
 
-.menu-item:hover,
-.menu-item:focus {
+.menu-item:hover {
   background-color: #d49847 !important;
   color: white;
   background-color: transparent;
