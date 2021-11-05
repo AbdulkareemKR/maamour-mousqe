@@ -22,7 +22,8 @@ function RegistrationModal(props) {
             className={styles.title}
             id="contained-modal-title-vcenter"
           >
-            تسجيل الدخول <BsFillPeopleFill className={styles.icons} />
+            {props.logIn ? "تسجيل الدخول " : " إنشاء حساب "}
+            <BsFillPeopleFill className={styles.icons} />
           </Modal.Title>
         </Modal.Header>
         <Row className={styles.registrationButtons}>
@@ -49,6 +50,23 @@ function RegistrationModal(props) {
         </Row>
         <Form className={styles.formStyle}>
           <Modal.Body className="show-grid">
+            {props.logIn ? (
+              ""
+            ) : (
+              <Form.Group as={Row} className={styles.group}>
+                <Form.Label className={styles.label} column sm="4">
+                  <FaIdCard className={styles.icons} /> الاسم
+                </Form.Label>
+                <Col>
+                  <Form.Control
+                    required
+                    className={styles.input}
+                    type="text"
+                    placeholder="أدخل اسمك"
+                  />
+                </Col>
+              </Form.Group>
+            )}
             <Form.Group as={Row} className={styles.group}>
               <Form.Label className={styles.label} column sm="4">
                 <FaIdCard className={styles.icons} /> الايميل
@@ -57,7 +75,7 @@ function RegistrationModal(props) {
                 <Form.Control
                   required
                   className={styles.input}
-                  type="text"
+                  type="email"
                   placeholder="أدخل ايميلك"
                 />
               </Col>
@@ -101,7 +119,8 @@ function RegistrationModal(props) {
                   </Form.Label>
                   <Col>
                     <Form.Control as="select" className={styles.input}>
-                      <option>تمهيدي</option>
+                      <option>دون الابتدائي</option>
+                      <option>ابتدائي</option>
                       <option>متوسط</option>
                       <option>ثانوي</option>
                       <option>جامعي</option>
