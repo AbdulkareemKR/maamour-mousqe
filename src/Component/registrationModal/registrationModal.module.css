@@ -4,6 +4,20 @@
   font-weight: bold;
 }
 
+.containter {
+  z-index: 5;
+}
+
+.backgroundLogo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.06;
+  size: 100%;
+  z-index: 1;
+}
+
 .title {
   margin: auto;
   font-family: inherit;
