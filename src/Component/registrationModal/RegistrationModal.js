@@ -28,14 +28,21 @@ function RegistrationModal(props) {
         <Row className={styles.registrationButtons}>
           <Col>
             <Button
-              className={styles.createButton}
+              className={`${styles.createButton} ${
+                props.logIn ? "" : `${styles.createButtonActive}`
+              }`}
               onClick={props.handleLogOut}
             >
               إنشاء حساب
             </Button>
           </Col>
           <Col>
-            <Button className={styles.createButton} onClick={props.handleLogIn}>
+            <Button
+              className={`${styles.createButton} ${
+                props.logIn ? `${styles.createButtonActive}` : ""
+              }`}
+              onClick={props.handleLogIn}
+            >
               تسجيل دخول
             </Button>
           </Col>
