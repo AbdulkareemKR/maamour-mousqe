@@ -83,7 +83,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
   border-color: transparent;
   text-decoration: none;
   margin-bottom: 25px;
-  border-bottom: solid 1px silver;
+  border-bottom: solid 1px rgb(172, 172, 172);
   direction: rtl;
   padding-right: 0;
   margin-right: 0;
