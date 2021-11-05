@@ -5,6 +5,8 @@ import styles from "./registrationModal.module.css";
 import { FaIdCard } from "react-icons/fa";
 import { BsFillPeopleFill } from "react-icons/bs";
 import { HiTag } from "react-icons/hi";
+import { MdEmail } from "react-icons/md";
+import { AiFillUnlock } from "react-icons/ai";
 
 // import React, { useState } from "react";
 
@@ -12,6 +14,7 @@ function RegistrationModal(props) {
   return (
     <div>
       <Modal
+        className={styles.modal}
         show={props.showModal}
         onHide={props.handleClose}
         aria-labelledby="contained-modal-title-vcenter"
@@ -69,7 +72,7 @@ function RegistrationModal(props) {
             )}
             <Form.Group as={Row} className={styles.group}>
               <Form.Label className={styles.label} column sm="4">
-                <FaIdCard className={styles.icons} /> الايميل
+                <MdEmail className={styles.icons} /> الايميل
               </Form.Label>
               <Col>
                 <Form.Control
@@ -83,7 +86,7 @@ function RegistrationModal(props) {
 
             <Form.Group as={Row} className={styles.group}>
               <Form.Label className={styles.label} column sm="4">
-                <FaIdCard className={styles.icons} /> كلمة المرور
+                <AiFillUnlock className={styles.icons} /> كلمة المرور
               </Form.Label>
               <Col>
                 <Form.Control
@@ -101,7 +104,7 @@ function RegistrationModal(props) {
               <div>
                 <Form.Group as={Row} className={styles.group}>
                   <Form.Label className={styles.label} column sm="4">
-                    <FaIdCard className={styles.icons} />
+                    <AiFillUnlock className={styles.icons} />
                     تأكيد كلمة المرور
                   </Form.Label>
                   <Col>
