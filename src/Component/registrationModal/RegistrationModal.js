@@ -135,6 +135,9 @@ function RegistrationModal(props) {
                   </Form.Group>
                 </div>
               )}
+              <a className={styles.forget} href={"/"}>
+                هل نسيت كلمة المرور؟
+              </a>
             </Modal.Body>
             <Modal.Footer className={styles.footer}>
               {props.logIn ? (

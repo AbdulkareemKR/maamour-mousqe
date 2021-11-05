@@ -109,8 +109,16 @@
   transition: 300ms ease;
 }
 
-.modalButton:disabled {
-  background-color: grey;
+.forget {
+  font-weight: bold;
+  font-size: small;
+  color: #d49747 !important;
+  margin: auto;
+}
+
+.forget:hover {
+  color: #d49747;
+  filter: brightness(0.75);
 }
 
 .modalButton:hover {
