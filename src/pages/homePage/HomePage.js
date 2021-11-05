@@ -16,6 +16,7 @@ function MainPage() {
         // damping={0.05}
         triggerOnce // to present each element on itself while moving down
         direction="up"
+        // fraction={0.3}
       >
         <img
           src={maamourFront}
