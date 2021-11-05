@@ -27,9 +27,7 @@ function RegistrationModal(props) {
             id="contained-modal-title-vcenter"
           >
             {props.logIn ? "تسجيل الدخول " : " إنشاء حساب "}
-            <BsFillPeopleFill
-              className={`${styles.icons} ${styles.titleIcon}`}
-            />
+            <BsFillPeopleFill className={styles.icons} />
           </Modal.Title>
         </Modal.Header>
         <Row className={styles.registrationButtons}>
