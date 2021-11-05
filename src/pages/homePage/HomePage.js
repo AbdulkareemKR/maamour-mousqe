@@ -13,9 +13,10 @@ function MainPage() {
       <Fade
         durtion={3000}
         cascade
-        damping={0.02}
+        damping={0.5}
         triggerOnce // to present each element on itself while moving down
         direction="up"
+        fraction={0.3}
       >
         <img
           src={maamourFront}
