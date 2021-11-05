@@ -60,9 +60,10 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .bm-item {
   display: block;
   position: absolute;
-  /* top: calc(50%); //if you want to center the sidebar list
-  transform: translateY(-50%); */
-  top: 4%;
+  /* //if you want to center the sidebar list */
+  top: calc(50%);
+  transform: translateY(-50%);
+  /* top: 4%; */
   right: 0;
 }
 
