@@ -3,6 +3,7 @@ import "./sidebarStyle.css";
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 import RegistrationModal from "../registrationModal/RegistrationModal";
+import { FaHome, FaQuestion } from "react-icons/fa";
 
 function SidebarBootstrap() {
   const [showModal, setModal] = useState(false);
@@ -37,7 +38,7 @@ function SidebarBootstrap() {
             href="/"
             onClick={(e) => pageClick(e.target.id)}
           >
-            <i className="fa fa-home"></i>
+            <FaHome className="fa fa-home" />
             <br />
             الرئيسية
           </Button>
@@ -57,9 +58,7 @@ function SidebarBootstrap() {
             // href="/about"
             onClick={(e) => pageClick(e.target.id)}
           >
-            <i style={{ fontSize: "2.5rem" }} className="fa">
-              &#xf128;
-            </i>
+            <FaQuestion style={{ fontSize: "2.5rem" }} className="fa" />
             <br />
             عن معمور
           </Button>
