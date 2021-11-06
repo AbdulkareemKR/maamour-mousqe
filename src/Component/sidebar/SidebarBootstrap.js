@@ -50,11 +50,7 @@ function SidebarBootstrap() {
             // href="/program"
             onClick={(e) => pageClick(e.target.id)}
           >
-            <TiGroup
-              style={{ fontSize: "2.5rem" }}
-              className="fa fa-users"
-              aria-hidden="true"
-            />
+            <TiGroup className="fa fa-users" aria-hidden="true" />
             <br />
             برامجنا
           </Button>
@@ -64,7 +60,7 @@ function SidebarBootstrap() {
             // href="/about"
             onClick={(e) => pageClick(e.target.id)}
           >
-            <FaQuestion style={{ fontSize: "2.5rem" }} className="fa" />
+            <FaQuestion className="fa" />
             <br />
             عن معمور
           </Button>

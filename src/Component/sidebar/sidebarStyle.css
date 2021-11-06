@@ -135,8 +135,12 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 .fa {
   color: #d49847;
-  font-size: 2rem;
+  font-size: 1.8rem;
   transition: 0.3s;
+}
+
+.fa-users {
+  font-size: 2.3rem;
 }
 
 .fa:hover {
