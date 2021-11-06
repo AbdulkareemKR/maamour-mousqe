@@ -3,7 +3,8 @@ import "./sidebarStyle.css";
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 import RegistrationModal from "../registrationModal/RegistrationModal";
-import { FaHome, FaQuestion } from "react-icons/fa";
+import { FaHome, FaQuestion, FaPhoneAlt, FaSignInAlt } from "react-icons/fa";
+import { TiGroup } from "react-icons/ti";
 
 function SidebarBootstrap() {
   const [showModal, setModal] = useState(false);
@@ -13,6 +14,7 @@ function SidebarBootstrap() {
   const fireModal = () => {
     setModal(true);
   };
+
   const handleClose = () => {
     setModal(false);
   };
@@ -48,7 +50,11 @@ function SidebarBootstrap() {
             // href="/program"
             onClick={(e) => pageClick(e.target.id)}
           >
-            <i className="fa fa-users" aria-hidden="true"></i>
+            <TiGroup
+              style={{ fontSize: "2.5rem" }}
+              className="fa fa-users"
+              aria-hidden="true"
+            />
             <br />
             برامجنا
           </Button>
@@ -68,7 +74,7 @@ function SidebarBootstrap() {
             // href="/contact"
             onClick={(e) => pageClick(e.target.id)}
           >
-            <i className="fa fa-phone" aria-hidden="true"></i>
+            <FaPhoneAlt className="fa fa-phone" aria-hidden="true" />
             <br />
             تواصل معنا
           </Button>
@@ -87,7 +93,7 @@ function SidebarBootstrap() {
               </div>
             ) : ( */}
             <div>
-              <i className="fa fa-sign-in" aria-hidden="true"></i>
+              <FaSignInAlt className="fa fa-sign-in" aria-hidden="true" />
               <br />
               تسجيل الدخول
             </div>
