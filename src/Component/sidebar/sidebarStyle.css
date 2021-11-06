@@ -64,7 +64,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
   /* //if you want to center the sidebar list */
   top: 50%;
   left: 50%;
-  transform: translate(-55%, -50%);
+  transform: translate(-50%, -50%);
   /* top: 4%; */
   padding-left: 5px;
 }
@@ -85,8 +85,6 @@ Note: Beware of modifying this element as it can break the animations - you shou
   margin-bottom: 25px;
   border-bottom: solid 3px rgb(172, 172, 172);
   direction: rtl;
-  padding-right: 0;
-  margin-right: 0;
   font-weight: 700;
   font-size: calc(8px + 0.5vw);
   font-family: "Cairo", sans-serif;
