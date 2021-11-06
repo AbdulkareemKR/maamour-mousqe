@@ -83,15 +83,23 @@ Note: Beware of modifying this element as it can break the animations - you shou
   border-color: transparent;
   text-decoration: none;
   margin-bottom: 25px;
-  border-bottom: solid 3px rgb(172, 172, 172);
   direction: rtl;
   font-weight: 700;
   font-size: calc(8px + 0.5vw);
   font-family: "Cairo", sans-serif;
   display: block;
   text-align: center;
-  transition: 0.3s;
   width: 100%;
+  transition: all 0.4s;
+}
+
+.menu-item::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  border-bottom: solid 3px rgb(172, 172, 172);
+  background-color: #333333;
 }
 
 .menu-item:focus {
@@ -136,16 +144,11 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .fa {
   color: #d49847;
   font-size: 1.8rem;
-  transition: 0.3s;
+  transition: all 0.4s;
 }
 
 .fa-users {
   font-size: 2.3rem;
-}
-
-.fa:hover {
-  background-color: #d49847;
-  color: #333333;
 }
 
 @media only screen and (max-width: 500px) {
