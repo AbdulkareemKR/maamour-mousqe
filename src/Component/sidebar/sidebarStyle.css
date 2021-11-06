@@ -64,7 +64,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
   /* //if you want to center the sidebar list */
   top: calc(50%);
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-55%, -50%);
   /* top: 4%; */
   padding-left: 5px;
 }
