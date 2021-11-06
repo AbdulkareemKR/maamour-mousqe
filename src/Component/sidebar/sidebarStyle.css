@@ -69,6 +69,10 @@ Note: Beware of modifying this element as it can break the animations - you shou
   padding-left: 5px;
 }
 
+.bm-item:not(:last-child) {
+  border-bottom: solid 1px rgb(172, 172, 172);
+}
+
 /* Styling of overlay */
 .bm-overlay {
   background: rgba(255, 255, 255, 0) !important;
