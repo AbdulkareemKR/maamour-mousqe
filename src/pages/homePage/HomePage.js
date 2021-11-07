@@ -11,9 +11,9 @@ function MainPage() {
   return (
     <div className={styles.container}>
       <Fade
-        durtion={1200}
+        durtion={3000}
         cascade
-        damping={0.3}
+        damping={0.02}
         triggerOnce // to present each element on itself while moving down
         direction="up"
         // fraction={0.3}
