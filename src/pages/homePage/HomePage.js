@@ -12,7 +12,7 @@ function MainPage() {
     <div className={styles.container}>
       <Fade
         durtion={3000}
-        // cascade
+        cascade // fade in element by element (i * damping * delay)
         damping={1}
         triggerOnce // to present each element on itself while moving down
         direction="up"
