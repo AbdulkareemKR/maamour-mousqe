@@ -12,11 +12,11 @@ function MainPage() {
     <div className={styles.container}>
       <Fade
         durtion={3000}
-        cascade
-        damping={0.02}
+        // cascade
+        damping={1}
         triggerOnce // to present each element on itself while moving down
         direction="up"
-        // fraction={0.3}
+        fraction={0.1}
       >
         <img
           src={maamourFront}
