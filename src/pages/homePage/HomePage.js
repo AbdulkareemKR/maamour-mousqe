@@ -13,7 +13,7 @@ function MainPage() {
       <Fade
         durtion={1200}
         cascade
-        damping={0.02}
+        damping={0.3}
         triggerOnce // to present each element on itself while moving down
         direction="up"
         // fraction={0.3}
