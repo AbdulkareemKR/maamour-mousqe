@@ -57,7 +57,6 @@ function SidebarBootstrap() {
           <Button
             id="about"
             className={`menu-item ${page === "about" ? "acitve" : ""}`}
-            // href="/about"
             onClick={(e) => pageClick(e.target.id)}
           >
             <FaQuestion className="fa" />
