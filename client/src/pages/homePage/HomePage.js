@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./home.module.css";
-import maamourFront from "../../Component/images/maamour-front.webp";
+import maamourFront from "../../Component/images/maamour-front.jpg";
 import maamourGarden from "../../Component/images/maamour-garden.jpg";
 import maamourIncubation from "../../Component/images/maamour-incubation.jpg";
 import Row from "react-bootstrap/Row";
