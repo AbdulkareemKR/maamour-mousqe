@@ -5,11 +5,13 @@ import { Button } from "react-bootstrap";
 import RegistrationModal from "../registrationModal/RegistrationModal";
 import { FaHome, FaQuestion, FaPhoneAlt, FaSignInAlt } from "react-icons/fa";
 import { TiGroup } from "react-icons/ti";
+// import Offcanvas from "react-bootstrap/Offcanvas";
 
 function SidebarBootstrap() {
   const [showModal, setModal] = useState(false);
   const [logIn, setLogIn] = useState(true);
   const [page, setPage] = useState("home");
+  // const [show, setShow] = useState(false);
 
   const fireModal = () => {
     setModal(true);
@@ -30,8 +32,28 @@ function SidebarBootstrap() {
     setPage(page);
   };
 
+  // const handleCloseSidebar = () => setShow(false);
+  // const handleShowSidebar = () => setShow(true);
+
   return (
     <div id="outer-container">
+      {/* <Button variant="primary" onClick={handleShowSidebar}>
+        Launch
+      </Button>
+      <Offcanvas
+        placement="end"
+        scroll={true}
+        show={show}
+        onHide={handleCloseSidebar}
+      >
+        <Offcanvas.Header closeButton>
+          <Offcanvas.Title>Offcanvas</Offcanvas.Title>
+        </Offcanvas.Header>
+        <Offcanvas.Body>
+          Some text as placeholder. In real life you can have the elements you
+          have chosen. Like, text, images, lists, etc.
+        </Offcanvas.Body>
+      </Offcanvas> */}
       <Menu right pageWrapId={"page-wrap"} outerContainerId={"outer-container"}>
         <main id="page-wrap">
           <Button

@@ -9,10 +9,18 @@ import { MdEmail } from "react-icons/md";
 import { AiFillUnlock } from "react-icons/ai";
 import Container from "react-bootstrap/Container";
 import brownLogo from "../images/brown-logo.png";
+import { useState } from "react";
 
 // import React, { useState } from "react";
 
 function RegistrationModal(props) {
+  const [userInfo, setUserInfo] = useState({
+    username: "",
+    email: "",
+    password: "",
+    confirmPassword: "",
+    education: "",
+  });
   return (
     <div>
       <Modal
@@ -72,6 +80,9 @@ function RegistrationModal(props) {
                     </Form.Label>
                     <Col>
                       <Form.Control
+                        onChange={(e) =>
+                          setUserInfo({ ...userInfo, username: e.target.value })
+                        }
                         required
                         className={styles.input}
                         type="text"
@@ -86,6 +97,9 @@ function RegistrationModal(props) {
                   </Form.Label>
                   <Col>
                     <Form.Control
+                      onChange={(e) =>
+                        setUserInfo({ ...userInfo, email: e.target.value })
+                      }
                       required
                       className={styles.input}
                       type="email"
@@ -100,6 +114,9 @@ function RegistrationModal(props) {
                   </Form.Label>
                   <Col>
                     <Form.Control
+                      onChange={(e) =>
+                        setUserInfo({ ...userInfo, password: e.target.value })
+                      }
                       required
                       className={styles.input}
                       type="password"
@@ -119,6 +136,12 @@ function RegistrationModal(props) {
                       </Form.Label>
                       <Col>
                         <Form.Control
+                          onChange={(e) =>
+                            setUserInfo({
+                              ...userInfo,
+                              confirmPassword: e.target.value,
+                            })
+                          }
                           required
                           className={styles.input}
                           type="password"
@@ -131,13 +154,22 @@ function RegistrationModal(props) {
                         <HiTag className={styles.icons} /> المرحلة الدراسية
                       </Form.Label>
                       <Col>
-                        <Form.Control as="select" className={styles.input}>
+                        <Form.Control
+                          as="select"
+                          onChange={(e) =>
+                            setUserInfo({
+                              ...userInfo,
+                              education: e.target.value,
+                            })
+                          }
+                          className={styles.input}
+                        >
                           <option>دون الابتدائي</option>
                           <option>ابتدائي</option>
                           <option>متوسط</option>
                           <option>ثانوي</option>
-                          <option>جامعي</option>
-                          <option>أب</option>
+                          <option>جامعة</option>
+                          <option>والد/ة</option>
                         </Form.Control>
                       </Col>
                     </Form.Group>
