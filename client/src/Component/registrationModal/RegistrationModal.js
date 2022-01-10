@@ -10,17 +10,51 @@ import { AiFillUnlock } from "react-icons/ai";
 import Container from "react-bootstrap/Container";
 import brownLogo from "../images/brown-logo.png";
 import { useState } from "react";
+import axios from "axios";
+// import { useNavigate } from "react-router-dom";
 
 // import React, { useState } from "react";
 
 function RegistrationModal(props) {
   const [userInfo, setUserInfo] = useState({
-    username: "",
+    name: "",
     email: "",
     password: "",
-    confirmPassword: "",
-    education: "",
+    userType: "normal",
+    educationLevel: "",
   });
+
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [feedback, setFeedback] = useState("");
+
+  // let navigate = useNavigate();
+
+  const register = (data) => {
+    if (userInfo.password !== confirmPassword) {
+      setFeedback("كلمة السر غير متطابقة");
+    }
+    axios.post("http://localhost:3001/auth", userInfo).then(() => {
+      console.log(data);
+    });
+  };
+
+  // const login = () => {
+  //   // const data = { name: name, password: password };
+  //   axios.post("http://localhost:3001/auth/login").then((response) => {
+  //     if (response.data.error) {
+  //       alert(response.data.error);
+  //     } else {
+  //       localStorage.setItem("accessToken", response.data.token);
+  //       // setAuthState({
+  //       //   name: response.data.name,
+  //       //   id: response.data.id,
+  //       //   status: true,
+  //       // });
+  //       navigate("/");
+  //     }
+  //   });
+  // };
+
   return (
     <div>
       <Modal
@@ -81,7 +115,7 @@ function RegistrationModal(props) {
                     <Col>
                       <Form.Control
                         onChange={(e) =>
-                          setUserInfo({ ...userInfo, username: e.target.value })
+                          setUserInfo({ ...userInfo, name: e.target.value })
                         }
                         required
                         className={styles.input}
@@ -136,12 +170,7 @@ function RegistrationModal(props) {
                       </Form.Label>
                       <Col>
                         <Form.Control
-                          onChange={(e) =>
-                            setUserInfo({
-                              ...userInfo,
-                              confirmPassword: e.target.value,
-                            })
-                          }
+                          onChange={(e) => setConfirmPassword(e.target.value)}
                           required
                           className={styles.input}
                           type="password"
@@ -159,7 +188,7 @@ function RegistrationModal(props) {
                           onChange={(e) =>
                             setUserInfo({
                               ...userInfo,
-                              education: e.target.value,
+                              educationLevel: e.target.value,
                             })
                           }
                           className={styles.input}
@@ -175,6 +204,9 @@ function RegistrationModal(props) {
                     </Form.Group>
                   </div>
                 )}
+                <div style={{ color: "red", textAlign: "center" }}>
+                  {feedback}
+                </div>
                 <a className={styles.forget} href={"/"}>
                   هل نسيت كلمة المرور؟
                 </a>
@@ -182,6 +214,7 @@ function RegistrationModal(props) {
               <Modal.Footer className={styles.footer}>
                 {props.logIn ? (
                   <Button
+                    // onClick={login}
                     className={`${styles.createButton} ${styles.submit}`}
                     type="submit"
                     // onClick={() => setModalShow(false)}
@@ -190,6 +223,7 @@ function RegistrationModal(props) {
                   </Button>
                 ) : (
                   <Button
+                    onClick={register}
                     className={`${styles.createButton} ${styles.submit}`}
                     type="submit"
                     // onClick={() => setModalShow(false)}

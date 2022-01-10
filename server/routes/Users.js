@@ -6,9 +6,15 @@ const { sign } = require("jsonwebtoken");
 const { validateToken } = require("../middlewares/AuthMiddleware");
 
 router.post("/", async (req, res) => {
-  const { username, password } = req.body;
+  const { name, email, password, userType, educationLevel } = req.body;
   bcrypt.hash(password, 10).then((hash) => {
-    Users.create({ username: username, password: hash });
+    Users.create({
+      name: name,
+      email: email,
+      password: hash,
+      userType: userType,
+      educationLevel: educationLevel,
+    });
   });
   res.json("SUCCESS");
 });
