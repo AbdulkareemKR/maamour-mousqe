@@ -1,17 +1,19 @@
 import { slide as Menu } from "react-burger-menu";
 import "./sidebarStyle.css";
 import React, { useState } from "react";
-import { Button } from "react-bootstrap";
 import RegistrationModal from "../registrationModal/RegistrationModal";
 import { FaHome, FaQuestion, FaPhoneAlt, FaSignInAlt } from "react-icons/fa";
 import { TiGroup } from "react-icons/ti";
+import { useNavigate } from "react-router-dom";
 // import Offcanvas from "react-bootstrap/Offcanvas";
+import Button from "react-bootstrap/Button";
 
 function SidebarBootstrap() {
   const [showModal, setModal] = useState(false);
   const [logIn, setLogIn] = useState(true);
   const [page, setPage] = useState("home");
   // const [show, setShow] = useState(false);
+  let navigate = useNavigate();
 
   const fireModal = () => {
     setModal(true);
@@ -28,8 +30,8 @@ function SidebarBootstrap() {
   };
 
   const pageClick = (page) => {
-    console.log(page);
     setPage(page);
+    navigate(page);
   };
 
   // const handleCloseSidebar = () => setShow(false);
@@ -57,9 +59,8 @@ function SidebarBootstrap() {
       <Menu right pageWrapId={"page-wrap"} outerContainerId={"outer-container"}>
         <main id="page-wrap">
           <Button
-            id="home"
-            className={`menu-item ${page === "home" ? "acitve" : ""}`}
-            href="/"
+            id="/"
+            className={`menu-item ${page === "/" ? "acitve" : ""}`}
             onClick={(e) => pageClick(e.target.id)}
           >
             <FaHome className="fa fa-home" />
@@ -67,9 +68,8 @@ function SidebarBootstrap() {
             الرئيسية
           </Button>
           <Button
-            id="program"
-            className={`menu-item ${page === "program" ? "acitve" : ""}`}
-            // href="/program"
+            id="programs"
+            className={`menu-item ${page === "programs" ? "acitve" : ""}`}
             onClick={(e) => pageClick(e.target.id)}
           >
             <TiGroup className="fa fa-users" aria-hidden="true" />
@@ -83,17 +83,16 @@ function SidebarBootstrap() {
           >
             <FaQuestion className="fa" />
             <br />
-            عن معمور
+            حجز القاعات
           </Button>
           <Button
             id="contact"
             className={`menu-item ${page === "contact" ? "acitve" : ""}`}
-            // href="/contact"
             onClick={(e) => pageClick(e.target.id)}
           >
             <FaPhoneAlt className="fa fa-phone" aria-hidden="true" />
             <br />
-            تواصل معنا
+            الإعلانات
           </Button>
           <Button
             id="setting"
@@ -114,7 +113,6 @@ function SidebarBootstrap() {
               <br />
               تسجيل الدخول
             </div>
-            {/* )} */}
           </Button>
         </main>
       </Menu>

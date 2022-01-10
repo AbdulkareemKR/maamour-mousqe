@@ -8,6 +8,7 @@ import SidebarBootstrap from "./Component/sidebar/SidebarBootstrap";
 import HomePage from "./pages/homePage/HomePage.js";
 import Header from "./Component/header/Header.js";
 import Footer from "./Component/footer/Footer.js";
+import Programs from "./pages/programs/Programs";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Routes>
           <Route path="/registration">{/* <RegistrationPage /> */}</Route>
           <Route path="/" element={<HomePage />} />
+          <Route path="/programs" element={<Programs />} />
         </Routes>
         <Footer />
       </div>
