@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Card from "react-bootstrap/Card";
-import Button from "react-bootstrap/Button";
 import { Fade } from "react-awesome-reveal";
 import styles from "./programs.module.css";
+import { MdOutlineMenuBook } from "react-icons/md";
 
 function Programs() {
   const [programs, setPrograms] = useState([]);
@@ -17,11 +17,10 @@ function Programs() {
     });
   }, []);
   return (
-    <div>
-      programs
+    <div className={styles.cards}>
       {programs.map((program, key) => {
         return (
-          <div className={styles.cards} key={key}>
+          <div key={key}>
             <Fade
               durtion={1200}
               cascade
@@ -30,9 +29,13 @@ function Programs() {
               direction="up"
             >
               <Card className={styles.card}>
-                <Card.Header>{program}</Card.Header>
-                <Card.Body></Card.Body>
-                <Button>More Details</Button>
+                <Card.Header className={styles.header}>{program}</Card.Header>
+                <Card.Body>
+                  <div className={styles.iconWrapper}>
+                    <MdOutlineMenuBook className={styles.icon} />
+                  </div>
+                </Card.Body>
+                <button className={styles.cardButton}>More Details</button>
               </Card>
             </Fade>
           </div>

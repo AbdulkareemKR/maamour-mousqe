@@ -2,8 +2,10 @@ import { slide as Menu } from "react-burger-menu";
 import "./sidebarStyle.css";
 import React, { useState } from "react";
 import RegistrationModal from "../registrationModal/RegistrationModal";
-import { FaHome, FaQuestion, FaPhoneAlt, FaSignInAlt } from "react-icons/fa";
+import { FaHome, FaSignInAlt } from "react-icons/fa";
 import { TiGroup } from "react-icons/ti";
+import { HiSpeakerphone } from "react-icons/hi";
+import { MdDateRange } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
 // import Offcanvas from "react-bootstrap/Offcanvas";
 import Button from "react-bootstrap/Button";
@@ -81,7 +83,7 @@ function SidebarBootstrap() {
             className={`menu-item ${page === "about" ? "acitve" : ""}`}
             onClick={(e) => pageClick(e.target.id)}
           >
-            <FaQuestion className="fa" />
+            <MdDateRange className="fa" />
             <br />
             حجز القاعات
           </Button>
@@ -90,7 +92,7 @@ function SidebarBootstrap() {
             className={`menu-item ${page === "contact" ? "acitve" : ""}`}
             onClick={(e) => pageClick(e.target.id)}
           >
-            <FaPhoneAlt className="fa fa-phone" aria-hidden="true" />
+            <HiSpeakerphone className="fa fa-phone" aria-hidden="true" />
             <br />
             الإعلانات
           </Button>

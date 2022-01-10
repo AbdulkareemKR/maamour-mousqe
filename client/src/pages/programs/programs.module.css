@@ -1,16 +1,40 @@
 .cards {
   display: grid;
-  grid-template-columns: repeat(4, auto);
+  grid-template-columns: repeat(3, auto);
   font-family: "Cairo", sans-serif;
 
   /* grid-auto-rows: 50px; */
-  /* column-gap: 1rem; */
+  column-gap: 1.5rem;
 }
 
 .card {
-  width: 280px;
-  margin: auto;
+  margin: 20px;
   margin-bottom: 30px;
   box-shadow: 1px 1px 5px 0 rgb(216, 213, 213);
   height: 400px;
+  border-radius: 20px;
+}
+
+.header {
+  margin: auto;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #d49847;
+}
+
+.iconWrapper {
+  text-align: center;
+}
+
+.icon {
+  width: 300px;
+  height: 300px;
+  color: #d49847;
+}
+
+.cardButton {
+  background-color: #d49847;
+  border: none;
+  font-size: 12px;
+  font-weight: bold;
 }
