@@ -32,8 +32,11 @@ function SidebarBootstrap() {
   };
 
   const pageClick = (page) => {
-    setPage(page);
-    navigate(page);
+    if (page !== "") {
+      console.log(page);
+      setPage(page);
+      navigate(page);
+    }
   };
 
   // const handleCloseSidebar = () => setShow(false);
@@ -75,10 +78,8 @@ function SidebarBootstrap() {
             onClick={(e) => pageClick(e.target.id)}
           >
             <TiGroup
-              id="programs"
-              onClick={(e) => pageClick(e.target.id)}
+              onClick={() => pageClick("programs")}
               className="fa fa-users"
-              aria-hidden="true"
             />
             <br />
             برامجنا
@@ -88,11 +89,7 @@ function SidebarBootstrap() {
             className={`menu-item ${page === "reserve" ? "acitve" : ""}`}
             onClick={(e) => pageClick(e.target.id)}
           >
-            <MdDateRange
-              id="reserve"
-              onClick={(e) => pageClick(e.target.id)}
-              className="fa"
-            />
+            <MdDateRange onClick={() => pageClick("reserve")} className="fa" />
             <br />
             حجز القاعات
           </Button>
@@ -102,8 +99,7 @@ function SidebarBootstrap() {
             onClick={(e) => pageClick(e.target.id)}
           >
             <HiSpeakerphone
-              id="announcement"
-              onClick={(e) => pageClick(e.target.id)}
+              onClick={() => pageClick("announcement")}
               className="fa fa-phone"
               aria-hidden="true"
             />
