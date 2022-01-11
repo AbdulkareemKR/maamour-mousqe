@@ -23,11 +23,16 @@
   transform: translateY(2px);
 }
 
+.card:focus .description {
+  display: inline-block;
+}
+
 .card:hover .description {
   display: inline-block;
 }
 
-.card:hover {
+.card:hover,
+.card:focus {
   background-color: rgba(128, 128, 128, 0.418);
 }
 
