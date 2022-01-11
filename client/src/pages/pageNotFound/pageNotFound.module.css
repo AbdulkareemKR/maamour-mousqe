@@ -1,0 +1,15 @@
+.container {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text {
+  font-family: "Cairo";
+  display: inline;
+  background-color: white;
+  font-size: 300%;
+  font-weight: bold;
+  border-radius: 10px;
+}
