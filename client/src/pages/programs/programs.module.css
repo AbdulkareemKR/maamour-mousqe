@@ -1,6 +1,6 @@
 .cards {
   display: grid;
-  grid-template-columns: repeat(3, auto);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1.5fr));
   font-family: "Cairo", sans-serif;
 
   /* grid-auto-rows: 50px; */
@@ -15,6 +15,18 @@
   border-radius: 20px;
 }
 
+/* @supports (display: grid) {
+  main {
+    max-width: 10000px;
+    margin: 0;
+  }
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
+    grid-gap: 1rem;
+  }
+} */
+
 .header {
   margin: auto;
   font-size: 20px;
@@ -27,8 +39,8 @@
 }
 
 .icon {
-  width: 300px;
-  height: 300px;
+  width: 90%;
+  height: 90%;
   color: #d49847;
 }
 

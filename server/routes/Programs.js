@@ -9,14 +9,14 @@ router.get("/", async (req, res) => {
 
 router.get("/byId/:id", async (req, res) => {
   const id = req.params.id;
-  const post = await Programs.findByPk(id);
-  res.json(post);
+  const program = await Programs.findByPk(id);
+  res.json(program);
 });
 
 router.post("/", async (req, res) => {
-  const post = req.body;
-  await Programs.create(post);
-  res.json(post);
+  const program = req.body;
+  await Programs.create(program);
+  res.json(program);
 });
 
 module.exports = router;
