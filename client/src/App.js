@@ -9,6 +9,7 @@ import HomePage from "./pages/homePage/HomePage.js";
 import Header from "./Component/header/Header.js";
 import Footer from "./Component/footer/Footer.js";
 import Programs from "./pages/programs/Programs";
+import PageNotFound from "./pages/pageNotFound/PageNotFound";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/registration">{/* <RegistrationPage /> */}</Route>
           <Route path="/" element={<HomePage />} />
           <Route path="/programs" element={<Programs />} />
+          <Route path="*" element={<PageNotFound />} />
         </Routes>
         <Footer />
       </div>

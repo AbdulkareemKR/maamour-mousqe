@@ -16,6 +16,7 @@ function Programs() {
       });
     });
   }, []);
+
   return (
     <div className={styles.cards}>
       {programs.map((program, key) => {

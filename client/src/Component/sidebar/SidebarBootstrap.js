@@ -74,25 +74,39 @@ function SidebarBootstrap() {
             className={`menu-item ${page === "programs" ? "acitve" : ""}`}
             onClick={(e) => pageClick(e.target.id)}
           >
-            <TiGroup className="fa fa-users" aria-hidden="true" />
+            <TiGroup
+              id="programs"
+              onClick={(e) => pageClick(e.target.id)}
+              className="fa fa-users"
+              aria-hidden="true"
+            />
             <br />
             برامجنا
           </Button>
           <Button
-            id="about"
-            className={`menu-item ${page === "about" ? "acitve" : ""}`}
+            id="reserve"
+            className={`menu-item ${page === "reserve" ? "acitve" : ""}`}
             onClick={(e) => pageClick(e.target.id)}
           >
-            <MdDateRange className="fa" />
+            <MdDateRange
+              id="reserve"
+              onClick={(e) => pageClick(e.target.id)}
+              className="fa"
+            />
             <br />
             حجز القاعات
           </Button>
           <Button
-            id="contact"
-            className={`menu-item ${page === "contact" ? "acitve" : ""}`}
+            id="announcement"
+            className={`menu-item ${page === "announcement" ? "acitve" : ""}`}
             onClick={(e) => pageClick(e.target.id)}
           >
-            <HiSpeakerphone className="fa fa-phone" aria-hidden="true" />
+            <HiSpeakerphone
+              id="announcement"
+              onClick={(e) => pageClick(e.target.id)}
+              className="fa fa-phone"
+              aria-hidden="true"
+            />
             <br />
             الإعلانات
           </Button>
