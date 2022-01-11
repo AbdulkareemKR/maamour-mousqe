@@ -1,10 +1,11 @@
 .cards {
+  min-height: 80vh;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1.5fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 2fr));
   font-family: "Cairo", sans-serif;
 
   /* grid-auto-rows: 50px; */
-  column-gap: 1.5rem;
+  /* column-gap: 1.5rem; */
 }
 
 .card {
@@ -13,19 +14,35 @@
   box-shadow: 1px 1px 5px 0 rgb(216, 213, 213);
   height: 400px;
   border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s;
 }
 
-/* @supports (display: grid) {
-  main {
-    max-width: 10000px;
-    margin: 0;
-  }
-  .cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
-    grid-gap: 1rem;
-  }
-} */
+.card:active {
+  box-shadow: 1px 1px 1px 0 rgb(216, 213, 213);
+  transform: translateY(2px);
+}
+
+.card:hover .description {
+  display: inline-block;
+}
+
+.card:hover {
+  background-color: rgba(128, 128, 128, 0.418);
+}
+
+.description {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+  font-weight: bold;
+  width: 90%;
+  direction: rtl;
+  display: none;
+  transition: all 0.3s;
+}
 
 .header {
   margin: auto;
