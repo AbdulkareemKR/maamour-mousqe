@@ -4,9 +4,11 @@ import { Fade } from "react-awesome-reveal";
 import styles from "./programs.module.css";
 import { MdOutlineMenuBook } from "react-icons/md";
 import axios from "axios";
+import Spinner from "react-bootstrap/Spinner";
 
 function Programs() {
   const [programs, setPrograms] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   // useEffect(() => {
   //   fetch(
@@ -19,40 +21,52 @@ function Programs() {
   // }, []);
 
   useEffect(() => {
-    axios.get("http://localhost:3001/programs").then((response) => {
-      console.log(response.data);
-      setPrograms(response.data);
-    });
+    axios
+      .get("https://maamour-backend.herokuapp.com/programs")
+      .then((response) => {
+        setPrograms(response.data);
+        setLoading(false);
+      });
   }, []);
 
   return (
     <div className={styles.cards}>
-      {programs.map((program, key) => {
-        return (
-          <div key={key}>
-            <Fade
-              durtion={1200}
-              cascade
-              damping={0.02}
-              triggerOnce // to present each element on itself while moving down
-              direction="up"
-            >
-              <Card className={styles.card}>
-                <Card.Header className={styles.header}>
-                  {program.name}
-                </Card.Header>
-                <Card.Body>
-                  <p className={styles.description}>{program.programDetails}</p>
-                  <div className={styles.iconWrapper}>
-                    <MdOutlineMenuBook className={styles.icon} />
-                  </div>
-                </Card.Body>
-                <button className={styles.cardButton}>More Details</button>
-              </Card>
-            </Fade>
-          </div>
-        );
-      })}
+      {loading ? (
+        <div className={styles.loadingWrapper}>
+          <Spinner animation="grow" className="spinner1" />
+        </div>
+      ) : (
+        <div className={styles.cards}>
+          {programs.map((program, key) => {
+            return (
+              <div key={key}>
+                <Fade
+                  durtion={1200}
+                  cascade
+                  damping={0.02}
+                  triggerOnce // to present each element on itself while moving down
+                  direction="up"
+                >
+                  <Card className={styles.card}>
+                    <Card.Header className={styles.header}>
+                      {program.name}
+                    </Card.Header>
+                    <Card.Body>
+                      <p className={styles.description}>
+                        {program.programDetails}
+                      </p>
+                      <div className={styles.iconWrapper}>
+                        <MdOutlineMenuBook className={styles.icon} />
+                      </div>
+                    </Card.Body>
+                    <button className={styles.cardButton}>More Details</button>
+                  </Card>
+                </Fade>
+              </div>
+            );
+          })}
+        </div>
+      )}
     </div>
   );
 }

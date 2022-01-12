@@ -19,8 +19,10 @@ const userRouter = require("./routes/Users");
 app.use("/auth", userRouter);
 //////////////////////////////////////////////////////////////////////
 
+const PORT = process.env.PORT || 3001;
+
 db.sequelize.sync().then(() => {
-  app.listen(3001, () => {
-    console.log("run on 3001");
+  app.listen(PORT, () => {
+    console.log(`running on port ${PORT}`);
   });
 });
