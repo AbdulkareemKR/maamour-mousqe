@@ -26,3 +26,5 @@ db.sequelize.sync().then(() => {
     console.log(`running on port ${PORT}`);
   });
 });
+
+//heroku git:remote -a yourApp
