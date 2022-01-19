@@ -21,10 +21,12 @@ function Programs() {
   // }, []);
 
   useEffect(() => {
-    axios.get("https://maamour-backend.herokuapp.com").then((response) => {
-      setPrograms(response.data);
-      setLoading(false);
-    });
+    axios
+      .get("https://maamour-backend.herokuapp.com/programs")
+      .then((response) => {
+        setPrograms(response.data);
+        setLoading(false);
+      });
   }, []);
 
   return (
