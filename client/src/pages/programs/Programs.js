@@ -5,7 +5,7 @@ import styles from "./programs.module.css";
 import { MdOutlineMenuBook } from "react-icons/md";
 import axios from "axios";
 import Spinner from "react-bootstrap/Spinner";
-
+// import quran from "../../Component/images/quran.jpeg";
 function Programs() {
   const [programs, setPrograms] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -20,52 +20,130 @@ function Programs() {
   //   });
   // }, []);
 
-  useEffect(() => {
-    axios
-      .get("https://maamour-backend.herokuapp.com/programs")
-      .then((response) => {
-        setPrograms(response.data);
-        setLoading(false);
-      });
-  }, []);
+  // useEffect(() => {
+  //   axios
+  //     .get("https://maamour-backend.herokuapp.com/programs")
+  //     .then((response) => {
+  //       setPrograms(response.data);
+  //       setLoading(false);
+  //     });
+  // }, []);
 
   return (
+    // <div className={styles.cards}>
+    //   {loading ? (
+    //     <div className={styles.loadingWrapper}>
+    //       <Spinner animation="grow" className="spinner1" />
+    //     </div>
+    //   ) : (
+    //     <div className={styles.cards}>
+    //       {programs.map((program, key) => {
+    //         return (
+    //           <div key={key}>
+    //             <Fade
+    //               durtion={1200}
+    //               cascade
+    //               damping={0.02}
+    //               triggerOnce // to present each element on itself while moving down
+    //               direction="up"
+    //             >
+    //               <Card className={styles.card}>
+    //                 <Card.Header className={styles.header}>
+    //                   {program.name}
+    //                 </Card.Header>
+    //                 <Card.Body>
+    //                   <p className={styles.description}>
+    //                     {program.programDetails}
+    //                   </p>
+    //                   <div className={styles.iconWrapper}>
+    //                     <MdOutlineMenuBook className={styles.icon} />
+    //                   </div>
+    //                 </Card.Body>
+    //               </Card>
+    //             </Fade>
+    //           </div>
+    //         );
+    //       })}
+    //     </div>
+    //   )}
+    // </div>
     <div className={styles.cards}>
-      {loading ? (
-        <div className={styles.loadingWrapper}>
-          <Spinner animation="grow" className="spinner1" />
-        </div>
-      ) : (
-        <div className={styles.cards}>
-          {programs.map((program, key) => {
-            return (
-              <div key={key}>
-                <Fade
-                  durtion={1200}
-                  cascade
-                  damping={0.02}
-                  triggerOnce // to present each element on itself while moving down
-                  direction="up"
-                >
-                  <Card className={styles.card}>
-                    <Card.Header className={styles.header}>
-                      {program.name}
-                    </Card.Header>
-                    <Card.Body>
-                      <p className={styles.description}>
-                        {program.programDetails}
-                      </p>
-                      <div className={styles.iconWrapper}>
-                        <MdOutlineMenuBook className={styles.icon} />
-                      </div>
-                    </Card.Body>
-                  </Card>
-                </Fade>
-              </div>
-            );
-          })}
-        </div>
-      )}
+      <Fade
+        durtion={1200}
+        cascade
+        damping={0.02}
+        triggerOnce // to present each element on itself while moving down
+        direction="up"
+      >
+        <Card className={styles.card}>
+          <Card.Header className={styles.header}>أشبال معمور</Card.Header>
+          <Card.Body>
+            <p className={styles.description}>
+              برنامج من اجل تحفيظ القران الكريم عن طريق المصحف المعلم والمحفظ
+              بالتكرار بدون نت موجه لجميع الفئات العمرية لحفظ تعليم وقراءة
+              المصحف الشريف برواية ورش عن نافع والتمكن من حفظه بطريقة سهلة
+              وميسرة
+            </p>
+            <div className={styles.iconWrapper}>
+              <MdOutlineMenuBook
+                style={{ margin: 0, padding: 0 }}
+                className={styles.icon}
+              />
+            </div>
+          </Card.Body>
+        </Card>
+        <Card className={styles.card}>
+          <Card.Header className={styles.header}>الحديث النبوي </Card.Header>
+          <Card.Body>
+            <p className={styles.description}>
+              برنامج من اجل تحفيظ القران الكريم عن طريق المصحف المعلم والمحفظ
+              بالتكرار بدون نت موجه لجميع الفئات العمرية لحفظ تعليم وقراءة
+              المصحف الشريف برواية ورش عن نافع والتمكن من حفظه بطريقة سهلة
+              وميسرة
+            </p>
+            <div className={styles.iconWrapper}>
+              <MdOutlineMenuBook
+                style={{ margin: 0, padding: 0 }}
+                className={styles.icon}
+              />
+            </div>
+          </Card.Body>
+        </Card>
+        <Card className={styles.card}>
+          <Card.Header className={styles.header}>مبادرة معمور</Card.Header>
+          <Card.Body>
+            <p className={styles.description}>
+              برنامج من اجل تحفيظ القران الكريم عن طريق المصحف المعلم والمحفظ
+              بالتكرار بدون نت موجه لجميع الفئات العمرية لحفظ تعليم وقراءة
+              المصحف الشريف برواية ورش عن نافع والتمكن من حفظه بطريقة سهلة
+              وميسرة
+            </p>
+            <div className={styles.iconWrapper}>
+              <MdOutlineMenuBook
+                style={{ margin: 0, padding: 0 }}
+                className={styles.icon}
+              />
+            </div>
+          </Card.Body>
+        </Card>
+        <Card className={styles.card}>
+          <Card.Header className={styles.header}>الإفطار الجماعي</Card.Header>
+          <Card.Body>
+            <p className={styles.description}>
+              برنامج من اجل تحفيظ القران الكريم عن طريق المصحف المعلم والمحفظ
+              بالتكرار بدون نت موجه لجميع الفئات العمرية لحفظ تعليم وقراءة
+              المصحف الشريف برواية ورش عن نافع والتمكن من حفظه بطريقة سهلة
+              وميسرة
+            </p>
+            <div className={styles.iconWrapper}>
+              <MdOutlineMenuBook
+                style={{ margin: 0, padding: 0 }}
+                className={styles.icon}
+              />
+            </div>
+          </Card.Body>
+        </Card>
+      </Fade>
     </div>
   );
 }
