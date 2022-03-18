@@ -85,11 +85,11 @@ function SidebarBootstrap() {
             برامجنا
           </Button>
           <Button
-            id="reserve"
-            className={`menu-item ${page === "reserve" ? "acitve" : ""}`}
+            id="hallBooking"
+            className={`menu-item ${page === "hallBooking" ? "acitve" : ""}`}
             onClick={(e) => pageClick(e.target.id)}
           >
-            <MdDateRange onClick={() => pageClick("reserve")} className="fa" />
+            <MdDateRange onClick={() => pageClick("hallBooking")} className="fa" />
             <br />
             حجز القاعات
           </Button>
