@@ -11,6 +11,7 @@ import Footer from "./Component/footer/Footer.js";
 import Programs from "./pages/programs/Programs";
 import PageNotFound from "./pages/pageNotFound/PageNotFound";
 import HallBooking from "./pages/hallBooking/HallBooking";
+import Iftar from "./pages/iftarProgram/Iftar";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route path="/programs" element={<Programs />} />
           <Route path="/hallBooking" element={<HallBooking />} />
           <Route path="*" element={<PageNotFound />} />
+          <Route path="/iftar" element={<Iftar />} />
         </Routes>
         <Footer />
       </div>
